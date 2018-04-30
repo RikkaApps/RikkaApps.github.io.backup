@@ -1,0 +1,51 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+article {
+    display: block;
+    min-height: calc(100vh - 2em - 32px);
+}
+
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 4px 16px 4px 16px;
+    }
+}
+
+footer {
+    border-top: 1px solid #d1d5da;
+    padding: 8px 45px 8px 45px;
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 8px 16px 8px 16px;
+        margin: 0;
+    }
+}
+
+footer a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #959da5;
+}
+
+#md-footer-box {
+    height: 2em;
+}
+
+.footer-logo {
+    height: 2em;
+    width: 2em;
+    float: right;
+}
