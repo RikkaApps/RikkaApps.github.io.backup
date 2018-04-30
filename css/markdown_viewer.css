@@ -42,6 +42,8 @@ footer a {
 
 #md-footer-box {
     height: 2em;
+    align-items: center;
+    overflow: auto;
 }
 
 .footer-logo {
