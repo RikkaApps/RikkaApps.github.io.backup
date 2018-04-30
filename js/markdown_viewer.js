@@ -8,9 +8,19 @@ $.urlParam = function (name) {
     }
 }
 
+var paths = window.location.href.split('/');
+var lang = $.urlParam('lang') || 'en';
+for (var i = 0; i < paths.length; i++) {
+    if (paths[i] == 'docs') {
+        lang = paths[i + 1];
+        if (lang.indexOf('?') >= 0) {
+            lang = lang.substr(0, lang.indexOf('?') - 1);
+        }
+    }
+}
+
 var rawUrl = "https://raw.githubusercontent.com/RikkaApps/StorageRedirect-assets/master/docs";
 var githubUrl = "https://github.com/RikkaApps/StorageRedirect-assets/blob/master/docs";
-var lang = $.urlParam('lang') || 'en';
 var docName = $.urlParam('doc');
 
 var converter = new showdown.Converter();
