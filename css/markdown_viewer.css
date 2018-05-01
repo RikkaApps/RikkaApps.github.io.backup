@@ -4,6 +4,14 @@ body {
 }
 
 .mdui-container {
+    padding-left: 0;
+    padding-right: 0;
+    min-height: calc(100vh - 2em - 32px);
+}
+
+.mdui-container-fluid {
+    padding-left: 0;
+    padding-right: 0;
     min-height: calc(100vh - 2em - 32px);
 }
 
@@ -17,6 +25,7 @@ body {
 
 @media (max-width: 767px) {
     .markdown-body {
+        margin: 0;
         padding: 4px 16px 4px 16px;
     }
 }
