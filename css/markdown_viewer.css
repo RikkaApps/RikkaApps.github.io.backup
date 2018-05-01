@@ -7,6 +7,20 @@ body {
     min-height: calc(100vh - 2em - 32px);
 }
 
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 4px 16px 4px 16px;
+    }
+}
+
 footer {
     border-top: 1px solid #d1d5da;
     margin-top: 16px;
