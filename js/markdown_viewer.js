@@ -38,7 +38,51 @@ if (docName) {
 
     $('#source-link').get(0).href = githubUrl + "/" + lang + "/" + docName + ".md";
 } else {
-    $('#markdown-content').get(0).style.display = 'none';
-    $('#markdown-error-text').get(0).style.display = 'unset';
+    $('.markdown-body').get(0).style.display = 'none';
+    $('#help-list-container').get(0).style.display = 'unset';
     $('#source-link').get(0).style.display = 'none';
+
+    $.ajax({
+        url : 'https://raw.githubusercontent.com/RikkaApps/StorageRedirect-assets/master/docs/help.json',
+        success: function(result) {
+            var result = JSON.parse(result);
+            var listElement = $('#help-list').get(0);
+            for (var i = 0; i < result.length; i++) {
+                var itemNode = document.createElement('a');
+
+                itemNode.classList.add('mdui-list-item');
+                itemNode.classList.add('mdui-ripple');
+                itemNode.id = result[i].id;
+
+                var icon = document.createElement('i');
+                icon.classList.add('mdui-list-item-icon');
+                icon.classList.add('mdui-icon');
+                icon.classList.add('material-icons');
+                icon.classList.add('mdui-text-color-teal');
+                icon.innerText = 'description';
+                itemNode.appendChild(icon);
+
+                var itemContent = document.createElement('div');
+                itemContent.classList.add('mdui-list-item-content');
+
+                var itemTitle = document.createElement('div');
+                itemTitle.classList.add('mdui-list-item-title');
+                itemTitle.classList.add('mdui-typo-body-2');
+                itemTitle.innerText = result[i].title[lang];
+                itemContent.appendChild(itemTitle);
+
+                if (result[i].summary) {
+                    var itemSummary = document.createElement('div');
+                    itemSummary.classList.add('mdui-list-item-text');
+                    itemSummary.classList.add('mdui-typo-body-1');
+                    itemSummary.innerText = result[i].summary[lang];
+                    itemContent.appendChild(itemSummary);
+                }
+
+                itemNode.appendChild(itemContent);
+                itemNode.href = result[i].content[lang];
+                listElement.appendChild(itemNode);
+            }
+        }
+    });
 }
