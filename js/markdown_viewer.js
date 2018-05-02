@@ -33,6 +33,11 @@ if (docName) {
         url : rawUrl + "/" + lang + "/" + docName + ".md",
         success: function(result) {
             $('#markdown-content').get(0).innerHTML = converter.makeHtml(result);
+
+            var imgs = $('#markdown-content img');
+            if (imgs.attr('src').indexOf('./images') == 0) {
+                imgs.attr('src', imgs.attr('src').replace('.', 'https://github.com/RikkaApps/StorageRedirect-assets/raw/master/docs/' + lang));
+            }
         }   
     });
 
