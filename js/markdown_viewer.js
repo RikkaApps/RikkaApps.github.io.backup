@@ -34,10 +34,13 @@ if (docName) {
         success: function(result) {
             $('#markdown-content').get(0).innerHTML = converter.makeHtml(result);
 
-            var imgs = $('#markdown-content img');
-            if (imgs.attr('src').indexOf('./images') == 0) {
-                imgs.attr('src', imgs.attr('src').replace('.', 'https://github.com/RikkaApps/StorageRedirect-assets/raw/master/docs/' + lang));
-            }
+            $('#markdown-content img').attr('src', (index, value) => {
+                if (value.indexOf('./images') == 0) {
+                    return value.replace('.', 'https://github.com/RikkaApps/StorageRedirect-assets/raw/master/docs/' + lang);
+                } else {
+                    return value;
+                }
+            });
         }   
     });
 
