@@ -1,0 +1,110 @@
+body.night-theme {
+  background-color: #212121;
+  color: rgba(255, 255, 255, 0.83);
+}
+
+.night-theme .markdown-body {
+  color: rgba(255, 255, 255, 0.83);
+}
+  
+.night-theme .markdown-body a {
+  color: #03a9f4;
+  text-decoration: none;
+}
+  
+.night-theme .markdown-body hr {
+  border-bottom: 1px solid #dfe2e5;
+}
+  
+.night-theme .markdown-body hr {
+  background-color: #e1e4e8;
+}
+  
+.night-theme .markdown-body blockquote {
+  color: rgba(255, 255, 255, 0.67);
+  border-left: 0.25em solid #dfe2e5;
+}
+  
+.night-theme .markdown-body kbd {
+  color: #444d56;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+  
+.night-theme .markdown-body h1 .octicon-link,
+.night-theme .markdown-body h2 .octicon-link,
+.night-theme .markdown-body h3 .octicon-link,
+.night-theme .markdown-body h4 .octicon-link,
+.night-theme .markdown-body h5 .octicon-link,
+.night-theme .markdown-body h6 .octicon-link {
+  color: #1b1f23;
+}
+  
+.night-theme .markdown-body h1 {
+  border-bottom: 1px solid #eaecef;
+}
+  
+.night-theme .markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+}
+  
+.night-theme .markdown-body h6 {
+  color: #6a737d;
+}
+  
+.night-theme .markdown-body table th,
+.night-theme .markdown-body table td {
+  border: 1px solid #dfe2e5;
+}
+  
+.night-theme .markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+  
+.night-theme .markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+  
+.night-theme .markdown-body img {
+  background-color: rgba(0, 0, 0, 0.84);
+}
+  
+.night-theme .markdown-body code {
+  background-color: #424242;
+}
+ 
+.night-theme .markdown-body .highlight pre,
+.night-theme .markdown-body pre {
+  background-color: #f6f8fa;
+}
+  
+.night-theme .markdown-body kbd {
+  color: #444d56;
+  background-color: #fafbfc;
+  border: solid 1px #d1d5da;
+  border-bottom-color: #c6cbd1;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+  
+.night-theme .markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+footer.night-theme {
+  border-top: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.night-theme #source-link {
+  color: rgba(255, 255, 255, 0.63);
+}
+
+.night-theme .mdui-typo-body-2 {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.night-theme .mdui-typo-body-1 {
+  color: rgba(255, 255, 255, 0.63);
+}

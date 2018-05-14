@@ -23,6 +23,12 @@ var rawUrl = "https://raw.githubusercontent.com/RikkaApps/StorageRedirect-assets
 var githubUrl = "https://github.com/RikkaApps/StorageRedirect-assets/blob/master/docs";
 var docName = $.urlParam('doc');
 
+var enableNightMode = $.urlParam('night') == 1;
+if (enableNightMode) {
+    $('footer').addClass('night-theme');
+    document.body.classList.add('night-theme');
+}
+
 var converter = new showdown.Converter();
 converter.setFlavor('github');
 
@@ -89,6 +95,9 @@ if (docName) {
 
                 itemNode.appendChild(itemContent);
                 itemNode.href = result[i].content[lang];
+                if (enableNightMode) {
+                    itemNode.href += (itemNode.href.indexOf('?') === -1 ? '?' : '&') + 'night=1';
+                }
                 listElement.appendChild(itemNode);
             }
         }
