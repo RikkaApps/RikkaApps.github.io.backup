@@ -22,6 +22,9 @@ for (var i = 0; i < paths.length; i++) {
 var rawUrl = document.querySelector("meta[name='github-raw-url']").getAttribute("content");
 var githubUrl = document.querySelector("meta[name='github-url']").getAttribute("content");
 var docName = $.urlParam('doc');
+var title = $.urlParam('title');
+if (!title)
+	title = docName;
 
 var docRootPath = document.querySelector("meta[name='docs-root-url']").getAttribute("content");
 
@@ -35,7 +38,7 @@ var converter = new showdown.Converter();
 converter.setFlavor('github');
 
 if (docName) {
-    document.title = decodeURI(docName);
+    document.title = decodeURI(title);
 
     $.ajax({
         url : rawUrl + "/" + lang + "/" + docName + ".md",
