@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Storage Redirect</title>
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.min.css">
+    <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
+    <style>
+        .mdui-tab .mdui-tab-active {
+            color: #ff4081;
+        }
+
+        .mdui-tab-indicator {
+            background-color: #ff4081;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="mdui-container-fluid mdui-shadow-6 mdui-theme-primary-white mdui-theme-accent-pink">
+    <div class="mdui-row">
+        <div class="mdui-col-md-3 mdui-col-xs-12">
+            <img class="mdui-center" style="margin: 20px 0;" alt="Logo" src="./logo.png"/>
+        </div>
+        <div class="mdui-col-md-9 mdui-col-xs-12" style="padding: 0 10px 0 10px;">
+            <div class="mdui-typo">
+                <h1 class="mdui-typo-title">Storage Redirect</h1>
+                <h5>将应用们产生的文件重定向到正确的位置，还原纯净的外部储存空间。</h5>
+            </div>
+            <div class="button-container" style="padding: 20px 0 20px 0;">
+                <div class="mdui-center">
+                    <a href="https://play.google.com/store/apps/details?id=moe.shizuku.redirectstorage" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"><i class="mdui-icon mdui-icon-left material-icons">get_app</i>Google Play</a>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple">酷安</button>
+                    <button id="version-select" mdui-menu="{target: '#version-select-menu'}" class="mdui-btn mdui-btn-raised mdui-ripple">选择版本下载</button>
+                    <ul class="mdui-menu" id="version-select-menu">
+                        <li class="mdui-menu-item">
+                            <a href="javascript:;" class="mdui-ripple">ARMv7</a>
+                        </li>
+                        <li class="mdui-menu-item">
+                            <a href="javascript:;" class="mdui-ripple">ARM64</a>
+                        </li>
+                        <li class="mdui-menu-item">
+                            <a href="javascript:;" class="mdui-ripple">x86</a>
+                        </li>
+                        <li class="mdui-menu-item">
+                            <a href="javascript:;" class="mdui-ripple">x86_64</a>
+                        </li>
+                        <li class="mdui-divider"></li>
+                        <li class="mdui-menu-item">
+                            <a href="javascript:;" class="mdui-ripple">如何选择？</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-tab" mdui-tab>
+        <a href="#tab-intro" class="mdui-ripple mdui-ripple-pink">介绍</a>
+        <a href="#tab-changelog" class="mdui-ripple mdui-ripple-pink">更新日志</a>
+        <a href="#tab-links" class="mdui-ripple mdui-ripple-pink">相关链接</a>
+    </div>
+</div>
+<div class="mdui-container-fluid mdui-typo mdui-theme-primary-white mdui-theme-accent-pink" style="padding: 10px 0 0 0;">
+    <div id="tab-intro" class="mdui-p-a-2">
+        介绍 blablabla
+    </div>
+    <div id="tab-changelog" class="mdui-p-a-2">
+        <ul>
+            <li>
+                <div class="mdui-typo-subheading">0.16.4 beta (2018-6-18)</div>
+                <ol class="mdui-typo-body-1">
+                    <li>今天 Rikka 依然没有女装</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div id="tab-links" class="mdui-p-a-2">
+        相关链接
+    </div>
+</div>
+<script>
+</script>
+</body>
+</html>
