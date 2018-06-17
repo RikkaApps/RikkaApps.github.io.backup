@@ -19,9 +19,11 @@ for (var i = 0; i < paths.length; i++) {
     }
 }
 
-var rawUrl = "https://raw.githubusercontent.com/RikkaApps/StorageRedirect-assets/master/docs";
-var githubUrl = "https://github.com/RikkaApps/StorageRedirect-assets/blob/master/docs";
+var rawUrl = document.querySelector("meta[name='github-raw-url']").getAttribute("content");
+var githubUrl = document.querySelector("meta[name='github-url']").getAttribute("content");
 var docName = $.urlParam('doc');
+
+var docRootPath = document.querySelector("meta[name='docs-root-url']").getAttribute("content");
 
 var enableNightMode = $.urlParam('night') == 1;
 if (enableNightMode) {
@@ -42,7 +44,7 @@ if (docName) {
 
             $('#markdown-content img').attr('src', (index, value) => {
                 if (value.indexOf('./images') == 0) {
-                    return value.replace('.', 'https://github.com/RikkaApps/StorageRedirect-assets/raw/master/docs/' + lang);
+                    return value.replace('.', docRootPath);
                 } else {
                     return value;
                 }
@@ -57,7 +59,7 @@ if (docName) {
     $('#source-link').get(0).style.display = 'none';
 
     $.ajax({
-        url : 'https://raw.githubusercontent.com/RikkaApps/StorageRedirect-assets/master/docs/help.json',
+        url : document.querySelector("meta[name='docs-list-json-url']").getAttribute("content"),
         success: function(result) {
             var result = JSON.parse(result);
             var listElement = $('#help-list').get(0);
