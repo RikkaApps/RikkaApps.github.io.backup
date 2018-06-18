@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.min.css">
-    <link href="../css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -19,6 +19,7 @@
         .mdui-tab-indicator {
             background-color: #ff4081;
         }
+
         @media (min-width: 200px) {
             .header-intro-text {
                 text-align: center;
@@ -43,258 +44,359 @@
 </head>
 <body>
 <div id="app">
-<div class="mdui-container-fluid mdui-shadow-6 mdui-theme-primary-white mdui-theme-accent-pink">
-    <div class="mdui-toolbar">
-        <div class="mdui-toolbar-spacer"></div>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#languages-menu'}" mdui-tooltip="{content: 'Other language', position: 'left'}"><i class="mdui-icon material-icons">translate</i></a>
-        <ul class="mdui-menu" id="languages-menu">
-            <li class="mdui-menu-item" v-bind:disabled="isLang('en')">
-                <a v-on:click="changeLangTo('en')" class="mdui-ripple">English</a>
-            </li>
-            <li class="mdui-menu-item" v-bind:disabled="isLang('zh-CN')">
-                <a v-on:click="changeLangTo('zh-CN')" class="mdui-ripple">中文（简体）</a>
-            </li>
-            <li class="mdui-menu-item" v-bind:disabled="isLang('zh-TW')">
-                <a v-on:click="changeLangTo('zh-TW')" class="mdui-ripple">中文（繁體）</a>
-            </li>
-        </ul>
-    </div>
-    <div class="mdui-row">
-        <div class="mdui-col-offset-lg-1 mdui-col-lg-4 mdui-col-sm-4 mdui-col-xs-12">
-            <img class="mdui-center" style="margin: 20px 0; max-width: 200px;" alt="Logo" src="./logo.png"/>
+    <!-- Header bar -->
+    <div class="mdui-container-fluid mdui-shadow-6 mdui-theme-primary-white mdui-theme-accent-pink">
+        <div class="mdui-toolbar">
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#languages-menu'}"
+               mdui-tooltip="{content: 'Other language', position: 'left'}"><i class="mdui-icon material-icons">translate</i></a>
+            <ul class="mdui-menu" id="languages-menu">
+                <li class="mdui-menu-item" v-bind:disabled="isLang('en')">
+                    <a v-on:click="changeLangTo('en')" v-bind:class="{'mdui-ripple':!isLang('en')}">English</a>
+                </li>
+                <li class="mdui-menu-item" v-bind:disabled="isLang('zh-CN')">
+                    <a v-on:click="changeLangTo('zh-CN')" v-bind:class="{'mdui-ripple':!isLang('zh-CN')}">中文（简体）</a>
+                </li>
+                <li class="mdui-menu-item" v-bind:disabled="isLang('zh-TW')">
+                    <a v-on:click="changeLangTo('zh-TW')" v-bind:class="{'mdui-ripple':!isLang('zh-TW')}">中文（繁體）</a>
+                </li>
+            </ul>
         </div>
-        <div class="mdui-col-lg-7 mdui-col-sm-8 mdui-col-xs-12" style="padding: 0 10px 0 10px;">
-            <div class="mdui-typo">
-                <template v-if="isLang('en')">
-                    <h1 class="mdui-typo-title header-intro-text">Storage Redirect</h1>
-                    <h5 class="mdui-m-y-1 header-intro-text">Redirect files produced by apps to correct location. Give you a clean external storage.</h5>
-                </template>
-                <template v-if="isLang('zh-CN')">
-                    <h1 class="mdui-typo-title header-intro-text">存储重定向</h1>
-                    <h5 class="mdui-m-y-1 header-intro-text">将应用们产生的文件重定向到正确的位置，还原纯净的外部储存空间。</h5>
-                </template>
-                <template v-if="isLang('zh-TW')">
-                    <h1 class="mdui-typo-title header-intro-text">儲存重新導向</h1>
-                    <h5 class="mdui-m-y-1 header-intro-text">將程式們產生的檔案重新導向至正確的位置，還原純淨的外置儲存空間。</h5>
-                </template>
+        <div class="mdui-row">
+            <div class="mdui-col-offset-lg-1 mdui-col-lg-4 mdui-col-sm-4 mdui-col-xs-12">
+                <img id="sr-logo" class="mdui-center" style="margin: 20px 0; max-width: 200px;" alt="Logo" src="./logo.png"/>
             </div>
-            <div class="button-container header-intro-text" style="padding: 20px 0 20px 0;">
-                <div class="mdui-center">
-                    <a href="https://play.google.com/store/apps/details?id=moe.shizuku.redirectstorage" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"><i class="mdi mdi-google-play"></i> Google Play</a>
-
+            <div class="mdui-col-lg-7 mdui-col-sm-8 mdui-col-xs-12" style="padding: 0 10px 0 10px;">
+                <div class="mdui-typo">
                     <template v-if="isLang('en')">
-                        <button id="version-select" mdui-menu="{target: '#more-downloads-menu'}" class="mdui-btn mdui-btn-raised mdui-ripple "><i class="mdi mdi-download"></i> Other ways</button>
-                        <ul class="mdui-menu" id="more-downloads-menu" style="text-align: start;">
-                            <li class="mdui-menu-item">
-                                <a href="javascript:;" class="mdui-ripple">Coolapk market</a>
-                            </li>
-                            <li class="mdui-menu-item">
-                                <a mdui-dialog="{target: '#github-releases-dialog'}" class="mdui-ripple">GitHub Releases</a>
-                            </li>
-                        </ul>
+                        <h1 class="mdui-typo-title header-intro-text">Storage Redirect</h1>
+                        <h5 class="mdui-m-y-1 header-intro-text">Redirect files produced by apps to correct location.
+                            Give you a clean external storage.</h5>
                     </template>
                     <template v-if="isLang('zh-CN')">
-                        <button id="version-select" mdui-menu="{target: '#more-downloads-menu'}" class="mdui-btn mdui-btn-raised mdui-ripple "><i class="mdi mdi-download"></i> 其它渠道</button>
-                        <ul class="mdui-menu" id="more-downloads-menu" style="text-align: start;">
-                            <li class="mdui-menu-item">
-                                <a href="javascript:;" class="mdui-ripple">酷安市场</a>
-                            </li>
-                            <li class="mdui-menu-item">
-                                <a mdui-dialog="{target: '#github-releases-dialog'}" class="mdui-ripple">GitHub Releases</a>
-                            </li>
-                        </ul>
+                        <h1 class="mdui-typo-title header-intro-text">存储重定向</h1>
+                        <h5 class="mdui-m-y-1 header-intro-text">将应用们产生的文件重定向到正确的位置，还原纯净的外部储存空间。</h5>
                     </template>
                     <template v-if="isLang('zh-TW')">
-                        <button id="version-select" mdui-menu="{target: '#more-downloads-menu'}" class="mdui-btn mdui-btn-raised mdui-ripple "><i class="mdi mdi-download"></i> 其它渠道</button>
-                        <ul class="mdui-menu" id="more-downloads-menu" style="text-align: start;">
-                            <li class="mdui-menu-item">
-                                <a href="javascript:;" class="mdui-ripple">酷安市集</a>
-                            </li>
-                            <li class="mdui-menu-item">
-                                <a mdui-dialog="{target: '#github-releases-dialog'}" class="mdui-ripple">GitHub Releases</a>
-                            </li>
-                        </ul>
+                        <h1 class="mdui-typo-title header-intro-text">儲存重新導向</h1>
+                        <h5 class="mdui-m-y-1 header-intro-text">將程式們產生的檔案重新導向至正確的位置，還原純淨的外置儲存空間。</h5>
                     </template>
                 </div>
-            </div>
+                <div class="button-container header-intro-text" style="padding: 20px 0 20px 0;">
+                    <div class="mdui-center">
+                        <a href="https://play.google.com/store/apps/details?id=moe.shizuku.redirectstorage"
+                           class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"><i
+                                class="mdi mdi-google-play"></i> Google Play</a>
 
-            <div class="mdui-dialog" id="github-releases-dialog">
-                <div class="mdui-dialog-title" v-if="isLang('en')">Download from GitHub Releases</div>
-                <div class="mdui-dialog-title" v-if="isLang('zh-CN')">从 GitHub Releases 上下载</div>
-                <div class="mdui-dialog-title" v-if="isLang('zh-TW')">从 GitHub Releases 上下载</div>
-                <div class="mdui-dialog-content">
-                    <div class="mdui-typo-body-2-opacity" v-if="isLang('en')">Select your CPU architecture:</div>
-                    <div class="mdui-typo-body-2-opacity" v-if="isLang('zh-CN')">选择你的 CPU 架构：</div>
-                    <div class="mdui-typo-body-2-opacity" v-if="isLang('zh-TW')">選擇你的 CPU 架構：</div>
-                    <select id="arch-select" class="mdui-select" mdui-select="{position: 'bottom'}">
-                        <option value="armv7">ARMv7</option>
-                        <option value="arm64">ARM64</option>
-                        <option value="x86">X86</option>
-                        <option value="x86_64">X86_64</option>
-                    </select>
-                    <br>
-                    <br>
+                        <template v-if="isLang('en')">
+                            <button id="version-select" mdui-menu="{target: '#more-downloads-menu'}"
+                                    class="mdui-btn mdui-btn-raised mdui-ripple "><i class="mdi mdi-download"></i> Other
+                                ways
+                            </button>
+                            <ul class="mdui-menu" id="more-downloads-menu" style="text-align: start;">
+                                <li class="mdui-menu-item">
+                                    <a href="javascript:;" class="mdui-ripple">Coolapk market</a>
+                                </li>
+                                <li class="mdui-menu-item">
+                                    <a mdui-dialog="{target: '#github-releases-dialog'}" class="mdui-ripple">GitHub
+                                        Releases</a>
+                                </li>
+                            </ul>
+                        </template>
+                        <template v-if="isLang('zh-CN')">
+                            <button id="version-select" mdui-menu="{target: '#more-downloads-menu'}"
+                                    class="mdui-btn mdui-btn-raised mdui-ripple "><i class="mdi mdi-download"></i> 其它渠道
+                            </button>
+                            <ul class="mdui-menu" id="more-downloads-menu" style="text-align: start;">
+                                <li class="mdui-menu-item">
+                                    <a href="javascript:;" class="mdui-ripple">酷安市场</a>
+                                </li>
+                                <li class="mdui-menu-item">
+                                    <a mdui-dialog="{target: '#github-releases-dialog'}" class="mdui-ripple">GitHub
+                                        Releases</a>
+                                </li>
+                            </ul>
+                        </template>
+                        <template v-if="isLang('zh-TW')">
+                            <button id="version-select" mdui-menu="{target: '#more-downloads-menu'}"
+                                    class="mdui-btn mdui-btn-raised mdui-ripple "><i class="mdi mdi-download"></i> 其它渠道
+                            </button>
+                            <ul class="mdui-menu" id="more-downloads-menu" style="text-align: start;">
+                                <li class="mdui-menu-item">
+                                    <a href="javascript:;" class="mdui-ripple">酷安市集</a>
+                                </li>
+                                <li class="mdui-menu-item">
+                                    <a mdui-dialog="{target: '#github-releases-dialog'}" class="mdui-ripple">GitHub
+                                        Releases</a>
+                                </li>
+                            </ul>
+                        </template>
+                    </div>
+                </div>
+
+                <div class="mdui-dialog" id="github-releases-dialog">
+                    <div class="mdui-dialog-title" v-if="isLang('en')">Download from GitHub Releases</div>
+                    <div class="mdui-dialog-title" v-if="isLang('zh-CN')">从 GitHub Releases 上下载</div>
+                    <div class="mdui-dialog-title" v-if="isLang('zh-TW')">从 GitHub Releases 上下载</div>
+                    <div class="mdui-dialog-content">
+                        <div class="mdui-typo-body-2-opacity" v-if="isLang('en')">Select your CPU architecture:</div>
+                        <div class="mdui-typo-body-2-opacity" v-if="isLang('zh-CN')">选择你的 CPU 架构：</div>
+                        <div class="mdui-typo-body-2-opacity" v-if="isLang('zh-TW')">選擇你的 CPU 架構：</div>
+                        <select id="arch-select" class="mdui-select" mdui-select="{position: 'bottom'}">
+                            <option value="armv7">ARMv7</option>
+                            <option value="arm64">ARM64</option>
+                            <option value="x86">X86</option>
+                            <option value="x86_64">X86_64</option>
+                        </select>
+                        <br>
+                        <br>
+                        <template v-if="isLang('en')">
+                            <p>
+                            <div class="mdui-typo-body-2">How to select version?</div>
+                            </p>
+                            <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI
+                                版本安装包。</p>
+                            <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                        </template>
+                        <template v-if="isLang('zh-CN')">
+                            <p>
+                            <div class="mdui-typo-body-2">如何选择版本？</div>
+                            </p>
+                            <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI
+                                版本安装包。</p>
+                            <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                        </template>
+                        <template v-if="isLang('zh-TW')">
+                            <p>
+                            <div class="mdui-typo-body-2">如何選擇版本？</div>
+                            </p>
+                            <p>由設備 CPU 架構分類通常分為 ARM、ARM64、MIPS、X86、X86_64 等類型，可以透過某些硬體檢查程式檢視，根據你的移動電話實際 CPU 與系統選擇對應的 ABI
+                                版本安裝包。</p>
+                            <p>如果實在不知道如何選擇，可以選擇<a href="">下載完整包</a>。</p>
+                        </template>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="mdui-dialog-actions">
+                        <template v-if="isLang('en')">
+                            <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>Cancel</button>
+                            <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple"
+                                    mdui-dialog-confirm>OK
+                            </button>
+                        </template>
+                        <template v-if="isLang('zh-CN')">
+                            <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
+                            <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple"
+                                    mdui-dialog-confirm>确定
+                            </button>
+                        </template>
+                        <template v-if="isLang('zh-TW')">
+                            <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
+                            <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple"
+                                    mdui-dialog-confirm>確認
+                            </button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tabs-bar" class="mdui-tab mdui-m-t-4" style="margin-left: 0;" mdui-tab>
+            <a v-for="tab in tabs" v-bind:href="tab.href" class="mdui-ripple mdui-ripple-pink">{{ tab.title }}</a>
+        </div>
+    </div>
+    <!-- Pages -->
+    <div class="mdui-container-fluid mdui-typo mdui-theme-primary-white mdui-theme-accent-pink">
+
+        <!-- Introduction tab -->
+        <div id="tab-intro" class="mdui-p-a-0">
+            <div class="mdui-row mdui-color-blue-grey mdui-p-a-4">
+                <div class="mdui-col-offset-xl-2 mdui-col-xl-2 mdui-col-offset-lg-2 mdui-col-lg-2 mdui-col-offset-md-1 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
+                    <img width="200px" class="mdui-center"
+                         src="https://lh3.googleusercontent.com/TFOB80mQ2kGQk0-xUItrfHxCzNYqrBvK4_ieeNQRNd3stal2FmnjnCbytmKRGMuzO0s=w1536-h730-rw"/>
+                </div>
+                <div class="mdui-col-xl-6 mdui-col-lg-6 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
                     <template v-if="isLang('en')">
-                        <p><div class="mdui-typo-body-2">How to select version?</div></p>
-                        <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI 版本安装包。</p>
-                        <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                        <div class="mdui-typo-display-1">Redirect your Android apps</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            Whatever if system apps or third-party apps (Unpaid users can only redirect at most 3 apps),
+                            calling Java or Native to create files, all of them can be redirected into individual space.
+                            Prevent from polluting external root path. You won't be annoyed by messy folders when using
+                            kinds of file manager or transferring data over PC. Enjoy a pleasing experience!
+                            <br><br>
+                            Basic requirement:
+                            <ul>
+                                <li>Min support Android 6.0</li>
+                                <li>Use SuperSU / Magisk SU to access root permission</li>
+                            </ul>
+                        </div>
+                        <div class="mdui-typo-caption-opacity mdui-m-t-4">
+                            * Few apps will use standard-Android download manager API. Files produced in this way cannot
+                            be redirected.
+                        </div>
                     </template>
                     <template v-if="isLang('zh-CN')">
-                        <p><div class="mdui-typo-body-2">如何选择版本？</div></p>
-                        <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI 版本安装包。</p>
-                        <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                        <div class="mdui-typo-display-1">重定向你的 Android 应用</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            无论是系统应用还是自行安装的应用（未付费用户最多可以启用三个应用的重定向），Java 或是 Native
+                            层创建的文件都可以重定向到单独的空间内，避免污染外部存储根目录。使用各种文件管理器和连接电脑传输数据时不再被杂乱的文件夹烦扰，提供更加赏心悦目的体验。
+                            <br><br>
+                            基本设备需求：
+                            <ul>
+                                <li>最低支持 Android 6.0</li>
+                                <li>使用 SuperSU 或者 Magisk SU 获取 Root 权限</li>
+                            </ul>
+                        </div>
+                        <div class="mdui-typo-caption-opacity mdui-m-t-4">
+                            * 个别应用使用 Android 标准 “下载管理器” 接口下载的文件无法重定向
+                        </div>
                     </template>
                     <template v-if="isLang('zh-TW')">
-                        <p><div class="mdui-typo-body-2">如何選擇版本？</div></p>
-                        <p>由設備 CPU 架構分類通常分為 ARM、ARM64、MIPS、X86、X86_64 等類型，可以透過某些硬體檢查程式檢視，根據你的移動電話實際 CPU 與系統選擇對應的 ABI 版本安裝包。</p>
-                        <p>如果實在不知道如何選擇，可以選擇<a href="">下載完整包</a>。</p>
+                        <div class="mdui-typo-display-1">重新導向你的 Android 程式</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            無論是系統程式還是自行安裝的程式（未付費使用者最多可以啟用三個程式的重新導向），Java 或是 Native
+                            層創建的檔案都可以重新導向至單獨的空間內，避免污染外置儲存根目錄。使用各種檔案管理器和連接 PC 傳送數據時不再被雜亂的檔案夾煩擾，提供更加賞心悅目的體驗。
+                            <br><br>
+                            基本設備需求：
+                            <ul>
+                                <li>最低支援 Android 6.0</li>
+                                <li>使用 SuperSU 或者 Magisk SU 存取 Root 權限</li>
+                            </ul>
+                        </div>
+                        <div class="mdui-typo-caption-opacity mdui-m-t-4">
+                            * 少數程式使用 Android 標準 “下載管理員” 介面下載的檔案無法重新導向
+                        </div>
                     </template>
-                    <br>
-                    <br>
                 </div>
-                <div class="mdui-dialog-actions">
+            </div>
+
+            <div class="mdui-row mdui-color-white mdui-p-a-4">
+                <div class="mdui-col-offset-xl-2 mdui-col-xl-6 mdui-col-offset-lg-2 mdui-col-lg-6 mdui-col-offset-md-1 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
                     <template v-if="isLang('en')">
-                        <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>Cancel</button>
-                        <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple" mdui-dialog-confirm>OK</button>
+                        <div class="mdui-typo-display-1">Move user-saved documents to correct location</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            After redirecting files to individual space, Storage Redirect will move user-saved documents
+                            and media to standard public directories according in accordance with settings. Everyone can
+                            contribute app redirecting rules. When commits are approved and added into official
+                            repository, all users can get a better configuration and determine which to be enabled by
+                            themselves.
+                        </div>
                     </template>
                     <template v-if="isLang('zh-CN')">
-                        <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
-                        <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple" mdui-dialog-confirm>确定</button>
+                        <div class="mdui-typo-display-1">纠正主动保存的文档目录</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            重定向文件到单独空间后，Storage Redirect
+                            会根据设定将用户主动保存的文档与媒体存至规范的公共目录。每个人都可以贡献应用的重定向规则，经审核加入官方规则列表后，所有用户都可以获得较佳的配置方案，再根据自身需求进行选择是否使用。
+                        </div>
                     </template>
                     <template v-if="isLang('zh-TW')">
-                        <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
-                        <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple" mdui-dialog-confirm>確認</button>
+                        <div class="mdui-typo-display-1">纠正主动保存的文档目录</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            重定向文件到单独空间后，Storage Redirect
+                            会根据设定将用户主动保存的文档与媒体存至规范的公共目录。每个人都可以贡献应用的重定向规则，经审核加入官方规则列表后，所有用户都可以获得较佳的配置方案，再根据自身需求进行选择是否使用。
+                        </div>
+                    </template>
+                </div>
+                <div class="mdui-col-xl-2 mdui-col-lg-2 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
+                    <img width="200px" class="mdui-center"
+                         src="https://lh3.googleusercontent.com/ZOEskhn2DOCve6_RLksii4QObNfc8W_erNKYBRhvSZTwbb4flr_R0sCnuQrbiHHMnfg=w1536-h730-rw"/>
+                </div>
+            </div>
+
+            <div class="mdui-row mdui-color-yellow-100 mdui-p-a-4">
+                <div class="mdui-col-offset-xl-2 mdui-col-xl-2 mdui-col-offset-lg-2 mdui-col-lg-2 mdui-col-offset-md-1 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
+                    <img width="200px" class="mdui-center"
+                         src="https://lh3.googleusercontent.com/yi_D4bfZEQ-pGFUQbjklYHz8BjYwAzCkUFn_gjiiMKEP40wbXhTUetQSG_N6sx3v-Aot=w1536-h730-rw"/>
+                </div>
+                <div class="mdui-col-xl-6 mdui-col-lg-6 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
+                    <template v-if="isLang('en')">
+                        <div class="mdui-typo-display-1">Monitor apps' file records</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            Paid users can monitor apps' file records when Storage Redirect enhancement module is
+                            activated, know how files are manipulated. For example, if apps correctly access public
+                            directories and read users' private data.
+                        </div>
+                        <div class="mdui-typo-caption-opacity mdui-m-t-4">
+                            * Currently, Enhancement module supported Magisk only.
+                        </div>
+                        <br>
+                        <button onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN/?doc=%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%9D%97'"
+                                class="mdui-btn mdui-color-white mdui-btn-raised mdui-ripple">Learn more
+                        </button>
+                    </template>
+                    <template v-if="isLang('zh-CN')">
+                        <div class="mdui-typo-display-1">监控应用的文件操作</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            付费版用户在 Storage Redirect 增强模块启用后可以监控应用的文件操作，得知已安装的应用在运行过程有什么行为，例如有没有正确地存取公共目录、是否读取用户隐私文件。
+                        </div>
+                        <div class="mdui-typo-caption-opacity mdui-m-t-4">
+                            * 增强模块目前仅提供 Magisk 版
+                        </div>
+                        <br>
+                        <button onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN/?doc=%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%9D%97'"
+                                class="mdui-btn mdui-color-white mdui-btn-raised mdui-ripple">了解更多
+                        </button>
+                    </template>
+                    <template v-if="isLang('zh-TW')">
+                        <div class="mdui-typo-display-1">监控应用的文件操作</div>
+                        <div class="mdui-typo-body-1 mdui-m-t-2">
+                            付费版用户在 Storage Redirect 增强模块启用后可以监控应用的文件操作，得知已安装的应用在运行过程有什么行为，例如有没有正确地存取公共目录、是否读取用户隐私文件。
+                        </div>
+                        <div class="mdui-typo-caption-opacity mdui-m-t-4">
+                            * 增强模块目前仅提供 Magisk 版
+                        </div>
+                        <br>
+                        <button onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN/?doc=%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%9D%97'"
+                                class="mdui-btn mdui-color-white mdui-btn-raised mdui-ripple">了解更多
+                        </button>
                     </template>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="mdui-tab mdui-m-t-4" mdui-tab>
-        <a v-for="tab in tabs" v-bind:href="tab.href" class="mdui-ripple mdui-ripple-pink">{{ tab.title }}</a>
-    </div>
-</div>
-<div class="mdui-container-fluid mdui-typo mdui-theme-primary-white mdui-theme-accent-pink">
-    <div id="tab-intro" class="mdui-p-a-0">
-        <div class="mdui-row mdui-color-blue-grey mdui-p-a-4">
-            <div class="mdui-col-offset-xl-1 mdui-col-xl-2 mdui-col-offset-lg-1 mdui-col-lg-2 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
-                <img width="200px" class="mdui-center" src="https://lh3.googleusercontent.com/TFOB80mQ2kGQk0-xUItrfHxCzNYqrBvK4_ieeNQRNd3stal2FmnjnCbytmKRGMuzO0s=w1536-h730-rw"/>
-            </div>
-            <div class="mdui-col-xl-8 mdui-col-lg-8 mdui-col-md-8 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
-                <template v-if="isLang('en')">
-                    <div class="mdui-typo-display-1">Redirect your Android apps</div>
-                    <div class="mdui-typo-body-1 mdui-m-t-2">
-                        Whatever if system apps or third-party apps (Unpaid users can only redirect at most 3 apps), calling Java or Native to create files, all of them can be redirected into individual space. Prevent from polluting external root path. You won't be annoyed by messy folders when using kinds of file manager or transferring data over PC. Enjoy a pleasing experience!
-                        <br><br>
-                        Basic requirement:
+
+
+        <!-- Changelog tab -->
+        <div id="tab-changelog" class="mdui-p-a-2">
+            <div class="mdui-panel" mdui-panel="{accordion: true}">
+
+                <div v-for="(history, index) in versionHistories"
+                     class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12"
+                     v-bind:class="{ 'mdui-panel-item-open' : (index == 0) }">
+                    <div class="mdui-panel-item-header">
+                        <div class="mdui-panel-item-title">{{ history.title }}</div>
+                        <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </div>
+                    <div class="mdui-panel-item-body">
                         <ul>
-                            <li>Min support Android 6.0</li>
-                            <li>Use SuperSU / Magisk SU to access root permission</li>
+                            <li v-for="item in history.contents">{{ item }}</li>
                         </ul>
                     </div>
-                    <div class="mdui-typo-caption-opacity mdui-m-t-4">
-                        * Few apps will use standard-Android download manager API. Files produced in this way cannot be redirected.
-                    </div>
-                </template>
-                <template v-if="isLang('zh-CN')">
-                    <div class="mdui-typo-display-1">重定向你的 Android 应用</div>
-                    <div class="mdui-typo-body-1 mdui-m-t-2">
-                        无论是系统应用还是自行安装的应用（未付费用户最多可以启用三个应用的重定向），Java 或是 Native 层创建的文件都可以重定向到单独的空间内，避免污染外部存储根目录。使用各种文件管理器和连接电脑传输数据时不再被杂乱的文件夹烦扰，提供更加赏心悦目的体验。
-                        <br><br>
-                        基本设备需求：
-                        <ul>
-                            <li>最低支持 Android 6.0</li>
-                            <li>使用 SuperSU 或者 Magisk SU 获取 Root 权限</li>
-                        </ul>
-                    </div>
-                    <div class="mdui-typo-caption-opacity mdui-m-t-4">
-                        * 个别应用使用 Android 标准 “下载管理器” 接口下载的文件无法重定向
-                    </div>
-                </template>
-                <template v-if="isLang('zh-TW')">
-                    <div class="mdui-typo-display-1">重新導向你的 Android 程式</div>
-                    <div class="mdui-typo-body-1 mdui-m-t-2">
-                        無論是系統程式還是自行安裝的程式（未付費使用者最多可以啟用三個程式的重新導向），Java 或是 Native 層創建的檔案都可以重新導向至單獨的空間內，避免污染外置儲存根目錄。使用各種檔案管理器和連接 PC 傳送數據時不再被雜亂的檔案夾煩擾，提供更加賞心悅目的體驗。
-                        <br><br>
-                        基本設備需求：
-                        <ul>
-                            <li>最低支援 Android 6.0</li>
-                            <li>使用 SuperSU 或者 Magisk SU 存取 Root 權限</li>
-                        </ul>
-                    </div>
-                    <div class="mdui-typo-caption-opacity mdui-m-t-4">
-                        * 少數程式使用 Android 標準 “下載管理員” 介面下載的檔案無法重新導向
-                    </div>
-                </template>
+                </div>
+
             </div>
         </div>
 
-        <div class="mdui-row mdui-color-white mdui-p-a-4">
-            <div class="mdui-col-offset-xl-1 mdui-col-xl-8 mdui-col-offset-lg-1 mdui-col-lg-8 mdui-col-md-8 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
-                <div class="mdui-typo-display-1">纠正主动保存的文档目录</div>
-                <div class="mdui-typo-body-1 mdui-m-t-2">
-                    重定向文件到单独空间后，Storage Redirect 会根据设定将用户主动保存的文档与媒体存至规范的公共目录。每个人都可以贡献应用的重定向规则，经审核加入官方规则列表后，所有用户都可以获得较佳的配置方案，再根据自身需求进行选择是否使用。
-                </div>
-            </div>
-            <div class="mdui-col-xl-2 mdui-col-lg-2 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
-                <img width="200px" class="mdui-center" src="https://lh3.googleusercontent.com/ZOEskhn2DOCve6_RLksii4QObNfc8W_erNKYBRhvSZTwbb4flr_R0sCnuQrbiHHMnfg=w1536-h730-rw"/>
-            </div>
-        </div>
 
-        <div class="mdui-row mdui-color-yellow-100 mdui-p-a-4">
-            <div class="mdui-col-offset-xl-1 mdui-col-xl-2 mdui-col-offset-lg-1 mdui-col-lg-2 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
-                <img width="200px" class="mdui-center" src="https://lh3.googleusercontent.com/yi_D4bfZEQ-pGFUQbjklYHz8BjYwAzCkUFn_gjiiMKEP40wbXhTUetQSG_N6sx3v-Aot=w1536-h730-rw"/>
-            </div>
-            <div class="mdui-col-xl-8 mdui-col-lg-8 mdui-col-md-8 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
-                <div class="mdui-typo-display-1">监控应用的文件操作</div>
-                <div class="mdui-typo-body-1 mdui-m-t-2">
-                    付费版用户在 Storage Redirect 增强模块启用后可以监控应用的文件操作，得知已安装的应用在运行过程有什么行为，例如有没有正确地存取公共目录、是否读取用户隐私文件。
-                </div>
-                <div class="mdui-typo-caption-opacity mdui-m-t-4">
-                    * 增强模块目前仅提供 Magisk 版
-                </div>
-                <br>
-                <button onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN/?doc=%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%9D%97'" class="mdui-btn mdui-color-white mdui-btn-raised mdui-ripple">了解更多</button>
-            </div>
-        </div>
-    </div>
+        <!-- Links tab -->
+        <div id="tab-links" class="mdui-p-a-2">
 
+            <div v-for="(link, index) in relativeLinks"
+                 class="mdui-card mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple mdui-hoverable"
+                 v-bind:class="{'mdui-m-t-2' : (index != 0), 'mdui-m-b-4' : (index == (relativeLinks.length - 1)) }"
+                 v-on:click="goTo(link.url)">
+                <div class="mdui-card-media mdui-col-xs-3">
 
-    <div id="tab-changelog" class="mdui-p-a-2">
-        <div class="mdui-panel" mdui-panel="{accordion: true}">
-
-            <div v-for="(history, index) in versionHistories" class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12" v-bind:class="{ 'mdui-panel-item-open' : (index == 0) }">
-                <div class="mdui-panel-item-header">
-                    <div class="mdui-panel-item-title">{{ history.title }}</div>
-                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
                 </div>
-                <div class="mdui-panel-item-body">
-                    <ul>
-                        <li v-for="item in history.contents">{{ item }}</li>
-                    </ul>
+                <div class="mdui-col-xs-9">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">{{ link.title }}</div>
+                        <div class="mdui-card-primary-subtitle">{{ link.summary }}</div>
+                        <br>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
-
-
-    <div id="tab-links" class="mdui-p-a-2">
-
-        <div v-for="(link, index) in relativeLinks" class="mdui-card mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple mdui-hoverable" v-bind:class="{'mdui-m-t-2' : (index != 0), 'mdui-m-b-4' : (index == (relativeLinks.length - 1)) }" v-on:click="goTo(link.url)">
-            <div class="mdui-card-media mdui-col-xs-3">
-
-            </div>
-            <div class="mdui-col-xs-9">
-                <div class="mdui-card-primary">
-                    <div class="mdui-card-primary-title">{{ link.title }}</div>
-                    <div class="mdui-card-primary-subtitle">{{ link.summary }}</div>
-                    <br>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
 </div>
 <script>
     var translation_data = {
@@ -538,6 +640,31 @@
         data.currentLang = 'en';
     }
     data.changeLangTo(data.currentLang);
+
+    function getElementLeft(element){
+        var actualLeft = element.offsetLeft;
+        var current = element.offsetParent;
+        while (current !==null){
+            actualLeft += (current.offsetLeft+current.clientLeft);
+            current = current.offsetParent;
+        }
+        return actualLeft;
+    }
+
+    function updateTabsMargin() {
+        if (mdui.JQ(window).width() > 600) {
+            var logoLeft = getElementLeft(document.getElementById('sr-logo'));
+            document.getElementById('tabs-bar').style.marginLeft = Math.max(0, logoLeft - 10) + 'px';
+        } else {
+            document.getElementById('tabs-bar').style.marginLeft = '0';
+        }
+    }
+
+    window.onresize = function () {
+        updateTabsMargin();
+    };
+
+    setTimeout(updateTabsMargin, 200);
 </script>
 </body>
 </html>
