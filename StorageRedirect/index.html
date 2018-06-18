@@ -24,10 +24,13 @@
 <body>
 <div class="mdui-container-fluid mdui-shadow-6 mdui-theme-primary-white mdui-theme-accent-pink">
     <div class="mdui-row">
-        <div class="mdui-col-md-3 mdui-col-xs-12">
-            <img class="mdui-center" style="margin: 20px 0;" alt="Logo" src="./logo.png"/>
+        <br>
+    </div>
+    <div class="mdui-row">
+        <div class="mdui-col-offset-lg-2 mdui-col-lg-3 mdui-col-sm-4 mdui-col-xs-12">
+            <img class="mdui-center" style="margin: 20px 0; max-width: 200px;" alt="Logo" src="./logo.png"/>
         </div>
-        <div class="mdui-col-md-9 mdui-col-xs-12" style="padding: 0 10px 0 10px;">
+        <div class="mdui-col-lg-5 mdui-col-sm-8 mdui-col-xs-12" style="padding: 0 10px 0 10px;">
             <div class="mdui-typo">
                 <h1 class="mdui-typo-title">Storage Redirect</h1>
                 <h5>将应用们产生的文件重定向到正确的位置，还原纯净的外部储存空间。</h5>
@@ -65,22 +68,151 @@
         <a href="#tab-links" class="mdui-ripple mdui-ripple-pink">相关链接</a>
     </div>
 </div>
-<div class="mdui-container-fluid mdui-typo mdui-theme-primary-white mdui-theme-accent-pink" style="padding: 10px 0 0 0;">
-    <div id="tab-intro" class="mdui-p-a-2">
-        介绍 blablabla
+<div class="mdui-container-fluid mdui-typo mdui-theme-primary-white mdui-theme-accent-pink">
+    <div id="tab-intro" class="mdui-p-a-0">
+        <div class="mdui-row mdui-color-blue-grey mdui-p-a-4">
+            <div class="mdui-col-xl-3 mdui-col-lg-3 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
+                <img width="200px" class="mdui-center" src="https://lh3.googleusercontent.com/TFOB80mQ2kGQk0-xUItrfHxCzNYqrBvK4_ieeNQRNd3stal2FmnjnCbytmKRGMuzO0s=w1536-h730-rw"/>
+            </div>
+            <div class="mdui-col-xl-9 mdui-col-lg-9 mdui-col-md-8 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
+                <div class="mdui-typo-display-1">重定向你的 Android 应用</div>
+                <div class="mdui-typo-body-1 mdui-m-t-2">
+                    无论是系统应用还是自行安装的应用，Java 或是 Native 层创建的文件都可以重定向到单独的空间内，避免污染外部存储根目录。使用各种文件管理器和连接电脑传输数据时不再被杂乱的文件夹烦扰，提供更加赏心悦目的体验。
+                </div>
+                <div class="mdui-typo-caption-opacity mdui-m-t-4">
+                    * 个别应用使用 Android 标准 “下载管理器” 接口下载的文件无法重定向
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-row mdui-color-white mdui-p-a-4">
+            <div class="mdui-col-xl-9 mdui-col-lg-9 mdui-col-md-8 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
+                <div class="mdui-typo-display-1">纠正主动保存的文档目录</div>
+                <div class="mdui-typo-body-1 mdui-m-t-2">
+                    重定向文件到单独空间后，Storage Redirect 会根据设定将用户主动保存的文档与媒体存至规范的公共目录。每个人都可以贡献应用的重定向规则，经审核加入官方规则列表后，所有用户都可以获得较佳的配置方案，再根据自身需求进行选择是否使用。
+                </div>
+            </div>
+            <div class="mdui-col-xl-3 mdui-col-lg-3 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
+                <img width="200px" class="mdui-center" src="https://lh3.googleusercontent.com/ZOEskhn2DOCve6_RLksii4QObNfc8W_erNKYBRhvSZTwbb4flr_R0sCnuQrbiHHMnfg=w1536-h730-rw"/>
+            </div>
+        </div>
+
+        <div class="mdui-row mdui-color-yellow-100 mdui-p-a-4">
+            <div class="mdui-col-xl-3 mdui-col-lg-3 mdui-col-md-3 mdui-col-sm-4 mdui-col-xs-12 mdui-p-a-1">
+                <img width="200px" class="mdui-center" src="https://lh3.googleusercontent.com/yi_D4bfZEQ-pGFUQbjklYHz8BjYwAzCkUFn_gjiiMKEP40wbXhTUetQSG_N6sx3v-Aot=w1536-h730-rw"/>
+            </div>
+            <div class="mdui-col-xl-9 mdui-col-lg-9 mdui-col-md-8 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
+                <div class="mdui-typo-display-1">监控应用的文件操作</div>
+                <div class="mdui-typo-body-1 mdui-m-t-2">
+                    付费版用户在 Storage Redirect 增强模块启用后可以监控应用的文件操作，得知已安装的应用在运行过程有什么行为，例如有没有正确地存取公共目录、是否读取用户隐私文件。
+                </div>
+                <div class="mdui-typo-caption-opacity mdui-m-t-4">
+                    * 增强模块目前仅提供 Magisk 版
+                </div>
+            </div>
+        </div>
     </div>
+
+
     <div id="tab-changelog" class="mdui-p-a-2">
-        <ul>
-            <li>
-                <div class="mdui-typo-subheading">0.16.4 beta (2018-6-18)</div>
-                <ol class="mdui-typo-body-1">
-                    <li>今天 Rikka 依然没有女装</li>
-                </ol>
-            </li>
-        </ul>
+        <div class="mdui-panel" mdui-panel="{accordion: true}">
+
+            <div class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">0.16.4</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <ul>
+                        <li>Add file stat for Redirect storage viewer</li>
+                        <li>Fix the problem that anyone is displayed as purchased</li>
+                        <li>Auto clean old server files</li>
+                        <li>Try to "fix" IAP problem "You have already own this item"</li>
+                        <li>Link files from target to source when enabling link rules</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">0.16.2</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <ul>
+                        <li>Enhanced File monitor: load more & filter by path / app</li>
+                        <li>Force grant storage permission for redirected apps</li>
+                        <li>Try to fix bug of link function (when create and delete files in a very short time)</li>
+                        <li>Create ".nomedia" file in Android/data/xxx automatically</li>
+                        <li>Add shortcut for File monitor (Android 7.1+)</li>
+                        <li>Fix crash when open help if no browser app installed</li>
+                        <li>Add more tips</li>
+                        <li>Fix bugs in 0.16.1 / 0.16.2</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">0.15.8</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <ul>
+                        <li>Files downloaded by redirected apps can be managed in Android's Files (DocumentUI) app</li>
+                        <li>Fix log parse (only some special ROM)</li>
+                        <li>Add "Show disabled apps" filter</li>
+                        <li>New app list style</li>
+                        <li>In-app logcat now catches logs from more sources</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">0.15.4</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <ul>
+                        <li>Fix reboot when new file created in folders monitored by link function (only on 8.0)</li>
+                        <li>Fix a bug of file monitoring function of the link function</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+
     <div id="tab-links" class="mdui-p-a-2">
-        相关链接
+
+        <div class="mdui-card mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple" onclick="window.location = 'https://github.com/RikkaApps/StorageRedirect-assets/blob/master/CONTRIBUTION.md'">
+            <div class="mdui-card-media mdui-col-xs-3">
+
+            </div>
+            <div class="mdui-col-xs-9">
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">应用规则贡献</div>
+                    <div class="mdui-card-primary-subtitle">为未支持的应用提交规则，纠正错误、过时的规则</div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-card mdui-m-t-2 mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple" onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN'">
+            <div class="mdui-card-media mdui-col-xs-3">
+
+            </div>
+            <div class="mdui-col-xs-9">
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">使用帮助</div>
+                    <div class="mdui-card-primary-subtitle">了解如何使用存储重定向以及常见问题的解决方法</div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <script>
