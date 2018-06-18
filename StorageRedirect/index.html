@@ -7,6 +7,7 @@
 
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.min.css">
+    <link href="../css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
     <style>
         .mdui-tab .mdui-tab-active {
@@ -37,27 +38,41 @@
             </div>
             <div class="button-container" style="text-align: center; padding: 20px 0 20px 0;">
                 <div class="mdui-center">
-                    <a href="https://play.google.com/store/apps/details?id=moe.shizuku.redirectstorage" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"><i class="mdui-icon mdui-icon-left material-icons">get_app</i>Google Play</a>
-                    <button class="mdui-btn mdui-btn-raised mdui-ripple">酷安</button>
-                    <button id="version-select" mdui-menu="{target: '#version-select-menu'}" class="mdui-btn mdui-btn-raised mdui-ripple">选择版本下载</button>
-                    <ul class="mdui-menu" id="version-select-menu">
+                    <a href="https://play.google.com/store/apps/details?id=moe.shizuku.redirectstorage" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"><i class="mdi mdi-google-play"></i> Google Play</a>
+
+                    <button id="version-select" mdui-menu="{target: '#more-downloads-menu'}" class="mdui-btn mdui-btn-raised mdui-ripple "><i class="mdi mdi-download"></i> 其它渠道</button>
+                    <ul class="mdui-menu" id="more-downloads-menu" style="text-align: start;">
                         <li class="mdui-menu-item">
-                            <a href="javascript:;" class="mdui-ripple">ARMv7</a>
+                            <a href="javascript:;" class="mdui-ripple">酷安市场</a>
                         </li>
                         <li class="mdui-menu-item">
-                            <a href="javascript:;" class="mdui-ripple">ARM64</a>
-                        </li>
-                        <li class="mdui-menu-item">
-                            <a href="javascript:;" class="mdui-ripple">x86</a>
-                        </li>
-                        <li class="mdui-menu-item">
-                            <a href="javascript:;" class="mdui-ripple">x86_64</a>
-                        </li>
-                        <li class="mdui-divider"></li>
-                        <li class="mdui-menu-item">
-                            <a href="javascript:;" class="mdui-ripple">如何选择？</a>
+                            <a mdui-dialog="{target: '#github-releases-dialog'}" class="mdui-ripple">GitHub Releases</a>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="mdui-dialog" id="github-releases-dialog">
+                <div class="mdui-dialog-title">从 GitHub Releases 上下载</div>
+                <div class="mdui-dialog-content">
+                    <div class="mdui-typo-body-2-opacity">选择你的 CPU 架构：</div>
+                    <select id="arch-select" class="mdui-select" mdui-select="{position: 'bottom'}">
+                        <option value="armv7">ARMv7</option>
+                        <option value="arm64">ARM64</option>
+                        <option value="x86">X86</option>
+                        <option value="x86_64">X86_64</option>
+                    </select>
+                    <br>
+                    <br>
+                    <p><div class="mdui-typo-body-2">如何选择版本？</div></p>
+                    <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI 版本安装包。</p>
+                    <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                    <br>
+                    <br>
+                </div>
+                <div class="mdui-dialog-actions">
+                    <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
+                    <button id="gh-releases-download-button" class="mdui-btn mdui-ripple" mdui-dialog-confirm>确定</button>
                 </div>
             </div>
         </div>
@@ -78,9 +93,17 @@
                 <div class="mdui-typo-display-1">重定向你的 Android 应用</div>
                 <div class="mdui-typo-body-1 mdui-m-t-2">
                     无论是系统应用还是自行安装的应用，Java 或是 Native 层创建的文件都可以重定向到单独的空间内，避免污染外部存储根目录。使用各种文件管理器和连接电脑传输数据时不再被杂乱的文件夹烦扰，提供更加赏心悦目的体验。
+                    <br><br>
+                    基本设备需求：
+                    <ul>
+                        <li>最低支持 Android 6.0</li>
+                        <li>使用 SuperSU 或者 Magisk SU 获取 Root 权限</li>
+                    </ul>
                 </div>
                 <div class="mdui-typo-caption-opacity mdui-m-t-4">
                     * 个别应用使用 Android 标准 “下载管理器” 接口下载的文件无法重定向
+                    <br>
+                    * 未付费用户最多可以启用三个应用的重定向
                 </div>
             </div>
         </div>
@@ -109,6 +132,8 @@
                 <div class="mdui-typo-caption-opacity mdui-m-t-4">
                     * 增强模块目前仅提供 Magisk 版
                 </div>
+                <br>
+                <button onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN/?doc=%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%9D%97'" class="mdui-btn mdui-color-white mdui-btn-raised mdui-ripple">了解更多</button>
             </div>
         </div>
     </div>
@@ -168,7 +193,7 @@
                 </div>
             </div>
 
-            <div class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12">
+            <div class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-m-b-4">
                 <div class="mdui-panel-item-header">
                     <div class="mdui-panel-item-title">0.15.4</div>
                     <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
@@ -187,7 +212,7 @@
 
     <div id="tab-links" class="mdui-p-a-2">
 
-        <div class="mdui-card mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple" onclick="window.location = 'https://github.com/RikkaApps/StorageRedirect-assets/blob/master/CONTRIBUTION.md'">
+        <div class="mdui-card mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple mdui-hoverable" onclick="window.location = 'https://github.com/RikkaApps/StorageRedirect-assets/blob/master/CONTRIBUTION.md'">
             <div class="mdui-card-media mdui-col-xs-3">
 
             </div>
@@ -200,7 +225,7 @@
             </div>
         </div>
 
-        <div class="mdui-card mdui-m-t-2 mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple" onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN'">
+        <div class="mdui-card mdui-m-t-2 mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple mdui-hoverable" onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN'">
             <div class="mdui-card-media mdui-col-xs-3">
 
             </div>
@@ -213,9 +238,26 @@
             </div>
         </div>
 
+        <div class="mdui-card mdui-m-t-2 mdui-col-offset-lg-3 mdui-col-lg-6 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12 mdui-ripple mdui-m-b-4 mdui-hoverable" onclick="window.location = 'https://github.com/RikkaApps/StorageRedirect-assets/blob/master/CONTRIBUTION.md'">
+            <div class="mdui-card-media mdui-col-xs-3">
+
+            </div>
+            <div class="mdui-col-xs-9">
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">加入 Telegram 官方群组</div>
+                    <div class="mdui-card-primary-subtitle">在 RikkaApps 官方交流群组中咨询问题、与其他用户交流使用技巧。</div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <script>
+    document.getElementById('gh-releases-download-button').addEventListener('click', function () {
+        var selectedValue = document.getElementById('arch-select').value;
+        mdui.snackbar("你选择了 " + selectedValue + " 架构的安装包，现在开始下载。", {position: 'left-bottom'});
+    });
 </script>
 </body>
 </html>
