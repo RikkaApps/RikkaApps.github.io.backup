@@ -24,17 +24,29 @@
             .header-intro-text {
                 text-align: center;
             }
+
+            .intro-tab-text {
+                padding: 0 0 0 0;
+            }
         }
 
         @media (min-width: 600px) {
             .header-intro-text {
                 text-align: center;
             }
+
+            .intro-tab-text {
+                padding: 0 32px 0 32px;
+            }
         }
 
         @media (min-width: 1024px) {
             .header-intro-text {
                 text-align: start;
+            }
+
+            .intro-tab-text {
+                padding: 0 32px 0 32px;
             }
         }
     </style>
@@ -139,60 +151,65 @@
                     <div class="mdui-dialog-title" v-if="isLang('zh-CN')">从 GitHub Releases 上下载</div>
                     <div class="mdui-dialog-title" v-if="isLang('zh-TW')">从 GitHub Releases 上下载</div>
                     <div class="mdui-dialog-content">
-                        <div class="mdui-typo-body-2-opacity" v-if="isLang('en')">Select your CPU architecture:</div>
-                        <div class="mdui-typo-body-2-opacity" v-if="isLang('zh-CN')">选择你的 CPU 架构：</div>
-                        <div class="mdui-typo-body-2-opacity" v-if="isLang('zh-TW')">選擇你的 CPU 架構：</div>
-                        <select id="arch-select" class="mdui-select" mdui-select="{position: 'bottom'}">
-                            <option value="armv7">ARMv7</option>
-                            <option value="arm64">ARM64</option>
-                            <option value="x86">X86</option>
-                            <option value="x86_64">X86_64</option>
-                        </select>
-                        <br>
-                        <br>
-                        <template v-if="isLang('en')">
-                            <p>
-                            <div class="mdui-typo-body-2">How to select version?</div>
-                            </p>
-                            <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI
-                                版本安装包。</p>
-                            <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                        <template v-if="isWeixin()">
+                            <p>微信用户请点击右上角的菜单选择使用其它浏览器打开再下载。</p>
                         </template>
-                        <template v-if="isLang('zh-CN')">
-                            <p>
-                            <div class="mdui-typo-body-2">如何选择版本？</div>
-                            </p>
-                            <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI
-                                版本安装包。</p>
-                            <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                        <template v-else>
+                            <div class="mdui-typo-body-2-opacity" v-if="isLang('en')">Select your CPU architecture:</div>
+                            <div class="mdui-typo-body-2-opacity" v-if="isLang('zh-CN')">选择你的 CPU 架构：</div>
+                            <div class="mdui-typo-body-2-opacity" v-if="isLang('zh-TW')">選擇你的 CPU 架構：</div>
+                            <select id="arch-select" class="mdui-select" mdui-select="{position: 'bottom'}">
+                                <option value="armeabi-v7a">ARMv7a</option>
+                                <option value="arm64-v8a">ARM64</option>
+                                <option value="x86">X86</option>
+                                <option value="x86_64">X86_64</option>
+                            </select>
+                            <br>
+                            <br>
+                            <template v-if="isLang('en')">
+                                <p>
+                                <div class="mdui-typo-body-2">How to select version?</div>
+                                </p>
+                                <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI
+                                    版本安装包。</p>
+                                <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                            </template>
+                            <template v-if="isLang('zh-CN')">
+                                <p>
+                                <div class="mdui-typo-body-2">如何选择版本？</div>
+                                </p>
+                                <p>由设备 CPU 架构分类通常分为 ARM、ARM64、MIPS、X86、X86_64 等类型，可以通过某些硬件检测应用查看，根据你的手机实际 CPU 和系统选择对应的 ABI
+                                    版本安装包。</p>
+                                <p>如果实在不知道如何选择，可以选择<a href="">下载完整包</a>。</p>
+                            </template>
+                            <template v-if="isLang('zh-TW')">
+                                <p>
+                                <div class="mdui-typo-body-2">如何選擇版本？</div>
+                                </p>
+                                <p>由設備 CPU 架構分類通常分為 ARM、ARM64、MIPS、X86、X86_64 等類型，可以透過某些硬體檢查程式檢視，根據你的移動電話實際 CPU 與系統選擇對應的 ABI
+                                    版本安裝包。</p>
+                                <p>如果實在不知道如何選擇，可以選擇<a href="">下載完整包</a>。</p>
+                            </template>
+                            <br>
+                            <br>
                         </template>
-                        <template v-if="isLang('zh-TW')">
-                            <p>
-                            <div class="mdui-typo-body-2">如何選擇版本？</div>
-                            </p>
-                            <p>由設備 CPU 架構分類通常分為 ARM、ARM64、MIPS、X86、X86_64 等類型，可以透過某些硬體檢查程式檢視，根據你的移動電話實際 CPU 與系統選擇對應的 ABI
-                                版本安裝包。</p>
-                            <p>如果實在不知道如何選擇，可以選擇<a href="">下載完整包</a>。</p>
-                        </template>
-                        <br>
-                        <br>
                     </div>
                     <div class="mdui-dialog-actions">
                         <template v-if="isLang('en')">
                             <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>Cancel</button>
-                            <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple"
+                            <button v-on:click="startDownloadGitHubReleases()" v-if="!isWeixin()" class="mdui-btn mdui-ripple"
                                     mdui-dialog-confirm>OK
                             </button>
                         </template>
                         <template v-if="isLang('zh-CN')">
                             <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
-                            <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple"
+                            <button v-on:click="startDownloadGitHubReleases()" v-if="!isWeixin()" class="mdui-btn mdui-ripple"
                                     mdui-dialog-confirm>确定
                             </button>
                         </template>
                         <template v-if="isLang('zh-TW')">
                             <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
-                            <button v-on:click="startDownloadGitHubReleases()" class="mdui-btn mdui-ripple"
+                            <button v-on:click="startDownloadGitHubReleases()" v-if="!isWeixin()" class="mdui-btn mdui-ripple"
                                     mdui-dialog-confirm>確認
                             </button>
                         </template>
@@ -214,7 +231,7 @@
                     <img width="200px" class="mdui-center"
                          src="https://lh3.googleusercontent.com/TFOB80mQ2kGQk0-xUItrfHxCzNYqrBvK4_ieeNQRNd3stal2FmnjnCbytmKRGMuzO0s=w1536-h730-rw"/>
                 </div>
-                <div class="mdui-col-xl-6 mdui-col-lg-6 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
+                <div class="intro-tab-text mdui-col-xl-6 mdui-col-lg-6 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
                     <template v-if="isLang('en')">
                         <div class="mdui-typo-display-1">Redirect your Android apps</div>
                         <div class="mdui-typo-body-1 mdui-m-t-2">
@@ -226,7 +243,7 @@
                             Basic requirement:
                             <ul>
                                 <li>Min support Android 6.0</li>
-                                <li>Use SuperSU / Magisk SU to access root permission</li>
+                                <li>Use SuperSU / Magisk SU to access <b>root permission</b></li>
                             </ul>
                         </div>
                         <div class="mdui-typo-caption-opacity mdui-m-t-4">
@@ -243,7 +260,7 @@
                             基本设备需求：
                             <ul>
                                 <li>最低支持 Android 6.0</li>
-                                <li>使用 SuperSU 或者 Magisk SU 获取 Root 权限</li>
+                                <li>使用 SuperSU 或者 Magisk SU 获取 <b>Root 权限</b></li>
                             </ul>
                         </div>
                         <div class="mdui-typo-caption-opacity mdui-m-t-4">
@@ -259,7 +276,7 @@
                             基本設備需求：
                             <ul>
                                 <li>最低支援 Android 6.0</li>
-                                <li>使用 SuperSU 或者 Magisk SU 存取 Root 權限</li>
+                                <li>使用 SuperSU 或者 Magisk SU 存取 <b>Root 權限</b></li>
                             </ul>
                         </div>
                         <div class="mdui-typo-caption-opacity mdui-m-t-4">
@@ -270,13 +287,13 @@
             </div>
 
             <div class="mdui-row mdui-color-white mdui-p-a-4">
-                <div class="mdui-col-offset-xl-2 mdui-col-xl-6 mdui-col-offset-lg-2 mdui-col-lg-6 mdui-col-offset-md-1 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
+                <div class="intro-tab-text mdui-col-offset-xl-2 mdui-col-xl-6 mdui-col-offset-lg-2 mdui-col-lg-6 mdui-col-offset-md-1 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
                     <template v-if="isLang('en')">
                         <div class="mdui-typo-display-1">Move user-saved documents to correct location</div>
                         <div class="mdui-typo-body-1 mdui-m-t-2">
                             After redirecting files to individual space, Storage Redirect will move user-saved documents
                             and media to standard public directories according in accordance with settings. Everyone can
-                            contribute app redirecting rules. When commits are approved and added into official
+                            contribute app redirecting rules. After commits are approved and added into official
                             repository, all users can get a better configuration and determine which to be enabled by
                             themselves.
                         </div>
@@ -289,10 +306,10 @@
                         </div>
                     </template>
                     <template v-if="isLang('zh-TW')">
-                        <div class="mdui-typo-display-1">纠正主动保存的文档目录</div>
+                        <div class="mdui-typo-display-1">糾正主動保存的檔案目錄</div>
                         <div class="mdui-typo-body-1 mdui-m-t-2">
-                            重定向文件到单独空间后，Storage Redirect
-                            会根据设定将用户主动保存的文档与媒体存至规范的公共目录。每个人都可以贡献应用的重定向规则，经审核加入官方规则列表后，所有用户都可以获得较佳的配置方案，再根据自身需求进行选择是否使用。
+                            重新導向檔案至獨立空間後，Storage Redirect
+                            會根據設定將使用者主動保存的檔案與媒體存至規範的公共目錄。每個人都可以貢獻程式的重新導向規則，經審核加入官方規則清單後，所有使用者都可以取得較佳的配置方案，再根據自身需求進行選擇是否使用。
                         </div>
                     </template>
                 </div>
@@ -307,7 +324,7 @@
                     <img width="200px" class="mdui-center"
                          src="https://lh3.googleusercontent.com/yi_D4bfZEQ-pGFUQbjklYHz8BjYwAzCkUFn_gjiiMKEP40wbXhTUetQSG_N6sx3v-Aot=w1536-h730-rw"/>
                 </div>
-                <div class="mdui-col-xl-6 mdui-col-lg-6 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
+                <div class="intro-tab-text mdui-col-xl-6 mdui-col-lg-6 mdui-col-md-7 mdui-col-sm-8 mdui-col-xs-12 mdui-p-y-1">
                     <template v-if="isLang('en')">
                         <div class="mdui-typo-display-1">Monitor apps' file records</div>
                         <div class="mdui-typo-body-1 mdui-m-t-2">
@@ -337,12 +354,12 @@
                         </button>
                     </template>
                     <template v-if="isLang('zh-TW')">
-                        <div class="mdui-typo-display-1">监控应用的文件操作</div>
+                        <div class="mdui-typo-display-1">監視程式的檔案操作</div>
                         <div class="mdui-typo-body-1 mdui-m-t-2">
-                            付费版用户在 Storage Redirect 增强模块启用后可以监控应用的文件操作，得知已安装的应用在运行过程有什么行为，例如有没有正确地存取公共目录、是否读取用户隐私文件。
+                            付費使用者在 Storage Redirect 增強模組啟用后可以監視程式的檔案操作，得知已安裝的程式在運作過程有什麼行為，例如有沒有正確地存取公共目錄、是否讀取使用者隱私檔案。
                         </div>
                         <div class="mdui-typo-caption-opacity mdui-m-t-4">
-                            * 增强模块目前仅提供 Magisk 版
+                            * 增強模組目前僅提供 Magisk 版
                         </div>
                         <br>
                         <button onclick="window.location = 'https://rikka.app/StorageRedirect/docs/zh-CN/?doc=%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%9D%97'"
@@ -356,7 +373,7 @@
 
         <!-- Changelog tab -->
         <div id="tab-changelog" class="mdui-p-a-2">
-            <div class="mdui-panel" mdui-panel="{accordion: true}">
+            <div class="mdui-panel" mdui-panel>
 
                 <div v-for="(history, index) in versionHistories"
                      class="mdui-panel-item mdui-col-offset-lg-2 mdui-col-lg-8 mdui-col-offset-sm-1 mdui-col-sm-10 mdui-col-xs-12"
@@ -451,17 +468,17 @@
             relativeLinks: [
                 {
                     title: 'Contribute app rules',
-                    summary: '为未支持的应用提交规则，纠正错误、过时的规则',
+                    summary: 'Commit rules for unsupported apps / Correct outdated rules',
                     url: 'https://github.com/RikkaApps/StorageRedirect-assets/blob/master/CONTRIBUTION.md'
                 },
                 {
                     title: 'Help documentation',
-                    summary: '了解如何使用存储重定向以及常见问题的解决方法',
-                    url: 'https://rikka.app/StorageRedirect/docs/zh-CN'
+                    summary: 'Learn how to use Storage Redirect & Frequently-asked questions',
+                    url: 'https://rikka.app/StorageRedirect/docs/en'
                 },
                 {
                     title: 'Join Telegram official group',
-                    summary: '在 RikkaApps 官方交流群组中咨询问题、与其他用户交流使用技巧',
+                    summary: 'Ask & discuss with others in RikkaApps official discussion group.',
                     url: 'https://t.me/RikkaUserGroup'
                 }
             ]
@@ -583,17 +600,17 @@
             relativeLinks: [
                 {
                     title: '應用程式規則貢獻',
-                    summary: '为未支持的应用提交规则，纠正错误、过时的规则',
+                    summary: '為未支援的程式提交規則，糾正錯誤、過時的規則',
                     url: 'https://github.com/RikkaApps/StorageRedirect-assets/blob/master/CONTRIBUTION.md'
                 },
                 {
                     title: '使用幫助',
-                    summary: '了解如何使用存储重定向以及常见问题的解决方法',
-                    url: 'https://rikka.app/StorageRedirect/docs/zh-CN'
+                    summary: '了解如何使用儲存重新導向及常見問題的解決方法',
+                    url: 'https://rikka.app/StorageRedirect/docs/zh-TW'
                 },
                 {
                     title: '加入 Telegram 官方群組',
-                    summary: '在 RikkaApps 官方交流群组中咨询问题、与其他用户交流使用技巧',
+                    summary: '在 RikkaApps 官方交流群組中咨詢問題、與其他使用者交流使用技巧',
                     url: 'https://t.me/RikkaUserGroup'
                 }
             ]
@@ -618,9 +635,38 @@
         isLang: function (lang) {
             return data.currentLang.indexOf(lang) === 0;
         },
+        isWeixin: function () {
+            return (typeof WeixinJSBridge !== "undefined");
+        },
         startDownloadGitHubReleases: function () {
+            if (data.isWeixin()) {
+                mdui.snackbar('请点击微信右上角菜单选择其它浏览器打开方可下载。');
+                return;
+            }
             var selectedValue = document.getElementById('arch-select').value;
-            mdui.snackbar("你选择了 " + selectedValue + " 架构的安装包，现在开始下载。", {position: 'left-bottom'});
+            var message;
+            if (data.isLang('zh-CN')) {
+                message = "你选择了 " + selectedValue + " 架构的安装包，现在开始下载。";
+            } else if (data.isLang('zh-TW')) {
+                message = "你選擇了 " + selectedValue + " 架構的安裝包，現在開始下載。";
+            } else {
+                message = "You choose " + selectedValue + " arch's install package. Now start downloading...";
+            }
+            mdui.snackbar(message, {position: 'left-bottom'});
+            mdui.JQ.ajax({
+                method: 'GET',
+                url: 'https://api.github.com/repos/RikkaApps/StorageRedirect-assets/releases/latest',
+                success: function (data) {
+                    data = JSON.parse(data);
+                    var assets = data.assets;
+                    for (var i = 0; i < assets.length; i++) {
+                        if (assets[i].name.indexOf(selectedValue + '.apk') !== -1) {
+                            window.location = assets[i].browser_download_url;
+                            break;
+                        }
+                    }
+                }
+            });
         },
 
         currentLang: navigator.language,
@@ -639,13 +685,16 @@
     if (data.currentLang.indexOf('en') === 0) {
         data.currentLang = 'en';
     }
+    if (!data.isLang('en') && !data.isLang('zh-CN') && !data.isLang('zh-TW')) {
+        data.currentLang = 'en';
+    }
     data.changeLangTo(data.currentLang);
 
-    function getElementLeft(element){
+    function getElementLeft(element) {
         var actualLeft = element.offsetLeft;
         var current = element.offsetParent;
-        while (current !==null){
-            actualLeft += (current.offsetLeft+current.clientLeft);
+        while (current !== null) {
+            actualLeft += (current.offsetLeft + current.clientLeft);
             current = current.offsetParent;
         }
         return actualLeft;
