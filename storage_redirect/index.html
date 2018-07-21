@@ -179,9 +179,12 @@
                                     <p>
                                         <div class="mdui-typo-body-2">How to select version?</div>
                                     </p>
-                                    <p>Different Android handsets use different CPUs, which support different instruction
-                                        sets. Each combination of CPU and instruction sets has its own ABI. Please select
-                                        the corresponding apk file according to your device's ABI.
+                                    <p>Different Android handsets use different CPUs, which support different instruction sets.
+                                        Each combination of CPU and instruction sets has its own ABI. Please select the corresponding
+                                        apk file according to your device's ABI.
+                                    </p>
+                                    <p>
+                                        <div class="mdui-typo-caption">* If you are using Samsung S7 Edge, you must use ARM-v7a version.</div>
                                     </p>
                                 </template>
                                 <template v-if="isLang('zh-CN')">
@@ -190,12 +193,18 @@
                                     </p>
                                     <p>不同 Android 设备使用不同的 CPU，因此支持不同的指令集。CPU 与指令集的每种组合都有其自己的 ABI。请根据你的设备的 ABI 选择对应的安装包。
                                     </p>
+                                    <p>
+                                        <div class="mdui-typo-caption">* 如果你正在使用 Samsung S7 Edge，你必须使用 ARM-v7a 版本。</div>
+                                    </p>
                                 </template>
                                 <template v-if="isLang('zh-TW')">
                                     <p>
                                         <div class="mdui-typo-body-2">如何選擇版本？</div>
                                     </p>
                                     <p>不同 Android 裝置使用不同的 CPU，因此支援不同的指令集。CPU 與指令集的每種組合都有其自己的 ABI。請根據你的裝置的 ABI 選擇對應的安裝包。
+                                    </p>
+                                    <p>
+                                        <div class="mdui-typo-caption">* 如果你正在使用 Samsung S7 Edge，你必須使用 ARM-v7a 版本。</div>
                                     </p>
                                 </template>
                                 <br>
@@ -300,9 +309,9 @@
                             <div class="mdui-typo-display-1">Move user-saved documents to correct location</div>
                             <div class="mdui-typo-body-1 mdui-m-t-2">
                                 After redirecting files to private storage space, Storage Redirect will move user-saved documents and media to standard public
-                                directories according to settings. Everyone can contribute to app redirecting
-                                rules. After commits are approved and added into official repository, all users can get a
-                                better configuration and determine what to enable by themselves.
+                                directories according to settings. Everyone can contribute to app redirecting rules. After
+                                commits are approved and added into official repository, all users can get a better configuration
+                                and determine what to enable by themselves.
                             </div>
                         </template>
                         <template v-if="isLang('zh-CN')">
@@ -334,8 +343,8 @@
                         <template v-if="isLang('en')">
                             <div class="mdui-typo-display-1">Monitor apps' file records</div>
                             <div class="mdui-typo-body-1 mdui-m-t-2">
-                                After enhance module is installed, file opertions of apps can be monitored. For example, you can find out whether apps access public
-                                directories correctly or read users' private data.
+                                After enhance module is installed, file opertions of apps can be monitored. For example, you can find out whether apps access
+                                public directories correctly or read users' private data.
                             </div>
                             <div class="mdui-typo-caption-opacity mdui-m-t-4">
                                 * Currently we only provide the Magisk version of Enhancement module
