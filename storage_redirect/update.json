@@ -1,0 +1,21 @@
+{
+    "code": 945,
+    "name": "0.18.2-beta",
+    "ignoreable": false,
+    "download": {
+        "url": "https://rikka.app/storage_redirect/",
+        "abi": {}
+    },
+    "text": {
+        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font><size value=\"8sp\"><br><br></size>版本 %1$s 包含：<li gap=\"8sp\">“非重定向文件夹”（旧称 “标准文件夹”）可自定义<li gap=\"8sp\"><li gap=\"8sp\">添加备份和恢复<li gap=\"8sp\">可以与 LineageOS 的 addonsu 工作，但一些非核心功能可能不工作<li gap=\"8sp\">成堆的 BUG 修复",
+        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version available</size></font><size value=\"8sp\"><br><br></size>Version %1$s contains:<li gap=\"8sp\">\"Non-redirect folder\" (old \"Standard folder\") is now customizable<li gap=\"8sp\">Add Backup & restore<li gap=\"8sp\">Works with LineageOS's addonsu, but some non-core feature may break<li gap=\"8sp\">BUG fix"
+    },
+    "download_button": {
+        "zh-CN": "下载",
+        "en": "Download"
+    },
+    "ignore_button": {
+        "zh-CN": "忽略这个版本",
+        "en": "Ignroe this version"
+    }
+}
