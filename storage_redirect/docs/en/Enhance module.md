@@ -36,7 +36,7 @@ _Before installation, **please make sure to confirm that you have learned how to
 
 **Please be sure to read the instructions, otherwise, developers will blame you if you report any of the conditions that already mentioned**
 
-[[Magisk] Riru - Core v4 for arm/arm64](https://github.com/RikkaApps/Riru/releases/download/v4/magisk-riru-core-arm-arm64-v4.zip)
+[[Magisk] Riru - Core v5 for arm/arm64](https://github.com/RikkaApps/Riru/releases/download/v4/magisk-riru-core-arm-arm64-v5.zip)
 
 [[Magisk] Riru - Storage Redirect v13 for arm/arm64](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-arm-arm64-v13.zip)
 
