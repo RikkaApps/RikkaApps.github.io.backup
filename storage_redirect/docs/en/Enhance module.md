@@ -3,8 +3,8 @@
 ## Features
 
 * Guarantee _Storage Redirect_ starts early than normal apps during boot stage
-* Guarantee redirected app\'s logic runs later than redirect
-* Monitor file access in public storage (only monitors _open_ call in _libc_ from app processes)
+* Guarantee redirected app's logic runs later than redirect
+* Monitor file access in public storage (only monitors `open open64 openat openat64 creat creat64 mkdir mkdirat` call in `libc` from app processes)
 
 ## Precautions
 
