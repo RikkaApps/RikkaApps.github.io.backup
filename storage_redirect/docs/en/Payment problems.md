@@ -1,6 +1,6 @@
 # Pricing policy
 
-In principle, prices will only go up and down, and there will be no additional charges for existing features.
+In principle, the price will only go up but not down, and there will be no additional charges for existing features.
 
 # Refund policy
 
