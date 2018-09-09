@@ -1,4 +1,4 @@
-# Enhance module
+# Enhancement module
 
 ## Features
 
@@ -26,7 +26,7 @@ From v13, enhance module is a module of [Riru](https://github.com/RikkaApps/Riru
 > Riru is open-source thing to inject app process by a replace system file. Riru module will able to exectue its own code in app process with Riru.
 
 0. IMPORTANT: **Delete all old module before v13**
-1. Download [[Magisk] Riru - Core v5 for arm/arm64](https://github.com/RikkaApps/Riru/releases/download/v4/magisk-riru-core-arm-arm64-v5.zip)
+1. Download [[Magisk] Riru - Core v5 for arm/arm64](https://github.com/RikkaApps/Riru/releases/download/v5/magisk-riru-core-arm-arm64-v5.zip)
 2. Download [[Magisk] Riru - Storage Redirect v13 for arm/arm64](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-arm-arm64-v13.zip)
 3. Install in _Magisk Manager_
 
