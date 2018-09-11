@@ -14,7 +14,7 @@ Yes. Granting storage permissions during an application run will cause the redir
 
 # Redirected apps still generate files.
 
-Due to the principle, there must be **a certain chance** that the redirect runs later than the logic of redirected apps. Use [Enhancement module](https://rikka.app/StorageRedirect/docs/en-US/?doc=enhancede) to resolve the issue.
+Due to the principle, there must be **a certain chance** that the redirect runs later than the logic of redirected apps. Use [Enhancement module](https://rikka.app/storage_redirect/docs/en/?doc=Enhance%20module) to resolve the issue.
 
 In addition, if the app downloads files using the system "Download Manager", the downloaded files will not be redirected due to the principle. This issue may be resolved with the help of the enhancement module in the future.
 

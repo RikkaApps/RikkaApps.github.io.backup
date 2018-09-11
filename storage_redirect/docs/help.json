@@ -109,6 +109,20 @@
         }
     },
     {
+        "order": 6,
+        "id": "payment",
+        "title": {
+            "zh-CN": "购买问题",
+            "zh-TW": "購買問題",
+            "en": "Payment problems"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=购买问题",
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=購買問題",
+            "en": "https://rikka.app/storage_redirect/docs/en/?doc=Payment%20problems"
+        }
+    },
+    {
         "order": 100,
         "id": "redirect_target",
         "hide_from_list": true,
