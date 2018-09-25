@@ -6,6 +6,12 @@ To find out problems you met in Storage Redirect, you can save debug logs and se
 
 First, enter Storage Redirect app and click Menu - Logcat before problems come out.
 
+Here shows current record status and history list:
+
+![Logcat history](./images/logcat_history.png)
+
+To start recording logs, click "Logcat status" and then turn on the switch.
+
 ![Logcat UI](./images/logcat_ui.png)
 
 After opening Logcat UI, it will automatically start logcat service. And you just need to wait for problems.
@@ -14,6 +20,4 @@ After opening Logcat UI, it will automatically start logcat service. And you jus
 
 ### Save and send
 
-After the problem come out, you can stop logcat service. Click Menu - View history and send logs recorded at corresponding time points to developer.
-
-![Logcat history](./images/logcat_history.png)
+After the problem come out, you can stop logcat service. Back to history list and send logs recorded at corresponding time points to developer.
