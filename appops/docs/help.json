@@ -1,0 +1,72 @@
+[
+    {
+        "order": 0,
+        "id": "what_is_appops",
+        "title": {
+            "zh-CN": "什么是 App Ops？",
+            "zh-TW": "什麼是 App Ops？",
+            "en": "What is App Ops?"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=what_is_appops&title=%E4%BB%80%E4%B9%88%E6%98%AF%20App%20Ops%EF%BC%9F",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=what_is_appops&title=%E4%BB%80%E4%B9%88%E6%98%AF%20App%20Ops%EF%BC%9F",
+            "en": "https://rikka.app/appops/docs/en/?doc=what_is_appops&title=What%20is%20App%20Ops?"
+        }
+    },
+    {
+        "order": 1,
+        "id": "privilege_mode",
+        "title": {
+            "zh-CN": "什么是特权模式？",
+            "zh-TW": "什麼是特權模式？",
+            "en": "What is privilege mode?"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=what_is_privilege_mode&title=%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%B9%E6%9D%83%E6%A8%A1%E5%BC%8F%EF%BC%9F",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=what_is_privilege_mode&title=%E4%BB%80%E9%BA%BC%E6%98%AF%E7%89%B9%E6%AC%8A%E6%A8%A1%E5%BC%8F%EF%BC%9F",
+            "en": "https://rikka.app/appops/docs/en/?doc=what_is_privilege_mode&title=What%20is%20privilege%20mode?"
+        }
+    },
+    {
+        "order": 2,
+        "id": "some_not_work",
+        "title": {
+            "zh-CN": "为什么一些权限设置无效？",
+            "zh-TW": "爲什麼一些權限設置無效？",
+            "en": "Why some permission setting not work?"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=some_not_work&title=%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%80%E4%BA%9B%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%EF%BC%9F",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=some_not_work&title=%E7%88%B2%E4%BB%80%E9%BA%BC%E4%B8%80%E4%BA%9B%E6%AC%8A%E9%99%90%E8%A8%AD%E7%BD%AE%E7%84%A1%E6%95%88%EF%BC%9F",
+            "en": "https://rikka.app/appops/docs/en/?doc=some_not_work&title=Why%20some%20permission%20setting%20not%20work?"
+        }
+    },
+    {
+        "order": 3,
+        "id": "runtime_permission",
+        "title": {
+            "zh-CN": "系统的权限对话框应该怎么选？（运行时权限）",
+            "zh-TW": "系統的權限對話框應該怎麼選？（運行時權限）",
+            "en": "How should the system's permissions dialog box be selected? (Runtime permissions)"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=runtime_permission&title=%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9D%83%E9%99%90%E5%AF%B9%E8%AF%9D%E6%A1%86%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E9%80%89%EF%BC%9F%EF%BC%88%E8%BF%90%E8%A1%8C%E6%97%B6%E6%9D%83%E9%99%90%EF%BC%89            ",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=runtime_permission&title=%E7%B3%BB%E7%B5%B1%E7%9A%84%E6%AC%8A%E9%99%90%E5%B0%8D%E8%A9%B1%E6%A1%86%E6%87%89%E8%A9%B2%E6%80%8E%E9%BA%BC%E9%81%B8%EF%BC%9F%EF%BC%88%E9%81%8B%E8%A1%8C%E6%99%82%E6%AC%8A%E9%99%90%EF%BC%89",
+            "en": "https://rikka.app/appops/docs/en/?doc=runtime_permission&title=How%20should%20the%20system%27s%20permissions%20dialog%20box%20be%20selected?%20%28Runtime%20permissions%29"
+        }
+    },
+    {
+        "order": 4,
+        "id": "less_items",
+        "title": {
+            "zh-CN": "什么我能改的设置比截图上的少（多）？",
+            "zh-TW": "爲什麼我能改的設置比截圖上的少（多）？",
+            "en": "Why the settings I can change is less (more) than settings on the screenshots?"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=less_items&title=%E4%BB%80%E4%B9%88%E6%88%91%E8%83%BD%E6%94%B9%E7%9A%84%E8%AE%BE%E7%BD%AE%E6%AF%94%E6%88%AA%E5%9B%BE%E4%B8%8A%E7%9A%84%E5%B0%91%EF%BC%88%E5%A4%9A%EF%BC%89%EF%BC%9F",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=less_items&title=%E7%88%B2%E4%BB%80%E9%BA%BC%E6%88%91%E8%83%BD%E6%94%B9%E7%9A%84%E8%A8%AD%E7%BD%AE%E6%AF%94%E6%88%AA%E5%9C%96%E4%B8%8A%E7%9A%84%E5%B0%91%EF%BC%88%E5%A4%9A%EF%BC%89%EF%BC%9F",
+            "en": "https://rikka.app/appops/docs/en/?doc=less_items&title=Why%20the%20settings%20I%20can%20change%20is%20less%20%28more%29%20than%20settings%20on%20the%20screenshots?"
+        }
+    }
+]
