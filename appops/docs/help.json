@@ -64,9 +64,9 @@
             "en": "Payment problems"
         },
         "content": {
-            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=payment&title=购买问题",
-            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=payment&title=購買問題",
-            "en": "https://rikka.app/storage_redirect/docs/en/?doc=payment&title=Payment%20problems"
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=payment&title=购买问题",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=payment&title=購買問題",
+            "en": "https://rikka.app/appops/docs/en/?doc=payment&title=Payment%20problems"
         }
     }
 ]
