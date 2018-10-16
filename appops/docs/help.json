@@ -74,14 +74,14 @@
             "en": "How to reset all settings?"
         },
         "summary": {
-            "zh-CN": "我想卸载",
-            "zh-TW": "我想解除安裝",
-            "en": "I want to uninstall"
+            "zh-CN": "“我想卸载”",
+            "zh-TW": "“我想解除安裝”",
+            "en": "\"I want to uninstall\""
         },
         "content": {
             "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=reset_all&title=如何重置全部设置？",
             "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=reset_all&title=如何重置全部設定？",
-            "en": "https://rikka.app/appops/docs/en/?doc=reset_all&title=How%to%reset%all%settings?"
+            "en": "https://rikka.app/appops/docs/en/?doc=reset_all&title=How%20to%20reset%20all%20settings?"
         }
     },
     {
