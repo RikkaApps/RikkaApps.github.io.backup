@@ -27,7 +27,7 @@ From v13, enhance module is a module of [Riru](https://github.com/RikkaApps/Riru
 1. IMPORTANT: **Delete all old module before v12 （if there is)**
 2. IMPORTANT: Make sure version of Storage Redirect is **1.0.0.r1083 or above**
 3. Make sure version of Magisk is v17 or above
-4. Download [[Magisk] Riru - Core v6 for arm/arm64](https://github.com/RikkaApps/Riru/releases/download/v6/magisk-riru-core-arm-arm64-v6.zip)
+4. Download [[Magisk] Riru - Core v7 for arm/arm64](https://github.com/RikkaApps/Riru/releases/download/v7/magisk-riru-core-arm-arm64-v7.zip)
 5. Download [[Magisk] Riru - Storage Redirect v14 for arm/arm64](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-arm-arm64-v14.zip)
 6. Install in _Magisk Manager_
 
