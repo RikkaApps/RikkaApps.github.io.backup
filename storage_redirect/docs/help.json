@@ -20,6 +20,25 @@
     },
     {
         "order": 1,
+        "id": "compatibility",
+        "title": {
+            "zh-CN": "兼容性报告",
+            "zh-TW": "相容性報告",
+            "en": "Compatibility report"
+        },
+        "summary": {
+            "zh-CN": "了解在你的设备上是否会有问题",
+            "zh-TW": "瞭解在你的裝置上是否會有問題",
+            "en": "Find out if there are problems with your device"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=compatibility&title=兼容性报告",
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=compatibility&title=相容性報告",
+            "en": "https://rikka.app/storage_redirect/docs/en/?doc=compatibility&title=Compatibility%20report"
+        }
+    },
+    {
+        "order": 2,
         "id": "about_redirect",
         "title": {
             "zh-CN": "关于重定向",
@@ -38,7 +57,7 @@
         }
     },
     {
-        "order": 2,
+        "order": 3,
         "id": "about_link",
         "title": {
             "zh-CN": "关于链接",
@@ -57,7 +76,7 @@
         }
     },
     {
-        "order": 3,
+        "order": 4,
         "id": "enhance_module",
         "title": {
             "zh-CN": "增强模块",
@@ -76,7 +95,7 @@
         }
     },
     {
-        "order": 4,
+        "order": 5,
         "id": "what_is_share_helper",
         "title": {
             "zh-CN": "什么是“分享助手”",
@@ -95,7 +114,7 @@
         }
     },
     {
-        "order": 5,
+        "order": 6,
         "id": "how_to_save_logs",
         "title": {
             "zh-CN": "如何保存调试日志",
@@ -109,7 +128,7 @@
         }
     },
     {
-        "order": 6,
+        "order": 7,
         "id": "payment",
         "title": {
             "zh-CN": "购买问题",
@@ -150,6 +169,17 @@
             "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=非重定向文件夹",
             "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=非重新導向資料夾",
             "en": "https://rikka.app/storage_redirect/docs/en/?doc=Non-redirect%20folders"
+        }
+    },
+    {
+        "order": 102,
+        "id": "payment_alipay",
+        "hide_from_list": true,
+        "title": {
+            "zh-CN": "购买问题"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=payment_alipay&title=购买问题"
         }
     },
     {
