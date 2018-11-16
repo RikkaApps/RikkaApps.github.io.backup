@@ -142,6 +142,25 @@
         }
     },
     {
+        "order": 8,
+        "id": "how_to_document",
+        "title": {
+            "zh-CN": "如何使用文档应用",
+            "zh-TW": "如何使用檔案應用",
+            "en": "How to use Document app"
+        },
+        "summary": {
+            "zh-CN": "如何使用文档应用及找不到文档应用要怎么办",
+            "zh-TW": "如何使用檔案應用及找不到檔案應用要怎麼辦",
+            "en": "How to use Document app and how to do if can't find it"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=how_to_document&title=如何使用文档应用",
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=how_to_document&title=如何使用檔案應用",
+            "en": "https://rikka.app/storage_redirect/docs/en/?doc=how_to_document&title=How%20to%20use%20Document%20app"
+        }
+    },
+    {
         "order": 100,
         "id": "redirect_target",
         "hide_from_list": true,
