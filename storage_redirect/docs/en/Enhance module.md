@@ -5,33 +5,29 @@
 * Guarantee _Storage Redirect_ starts early than normal apps during boot stage
 * Guarantee redirected app's logic runs later than redirect
 * Monitor file access in public storage (only monitors `open open64 openat openat64 creat creat64 mkdir mkdirat` call in `libc` from app processes)
+* Fix the problem that redirect apps can't move files between specific folders
 
 ## Precautions
 
+* Back up all your data before use
 * Try to disable (delete) it if you have any problem
-* If there is a problem, it is helpful for developers to provide the log since booting
-* For devices that have encryption enabled and the decryption process is performed after the boot is completed (usually due to enable accessibility apps), if decryption (unlocking for the first time) is too late, it may cause the redirected accessibility apps or IME apps (and apps support Direct boot) unable to use. If you need to use the input method to unlock, do not enable redirect for this input method.
 
 ## Install
 
 _Since this solution needs to replace system files, we only provide Magisk modules for now._
 
-### Install with Magisk (recommended)
+### Install with [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445) (recommended)
 
-> The Magisk module approach uses [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445) to replace system files without modifying real `/system`
+IMPORTANT: Before installation, **please make sure that you have learned how to remove the module when the system can't start**
 
 From v13, enhance module is a module of [Riru](https://github.com/RikkaApps/Riru), install Riru is required.
 
-> Riru is open-source thing to inject app process by a replace system file. Riru module will able to exectue its own code in app process with Riru.
-
-1. IMPORTANT: **Delete all old module before v12 （if there is)**
+1. IMPORTANT: **Delete all old module before v12 (if there is)**
 2. IMPORTANT: Make sure version of Storage Redirect is **1.0.0.r1083 or above**
 3. Make sure version of Magisk is v17 or above
 4. Download [[Magisk] Riru - Core v9 for arm/arm64](https://github.com/RikkaApps/Riru/releases/download/v9/magisk-riru-core-arm-arm64-v9.zip)
-5. Download [[Magisk] Riru - Storage Redirect v14 for arm/arm64](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-arm-arm64-v14.zip)
+5. Download [[Magisk] Riru - Storage Redirect v15 for arm/arm64](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-arm-arm64-v15.zip)
 6. Install in _Magisk Manager_
-
-   IMPORTANT: Before installation, **please make sure to confirm that you have learned how to remove the module when system can't start**, otherwise, you will not be able to enter the system if your system is not compatible with it.
 
 ## How to check if it works
 
