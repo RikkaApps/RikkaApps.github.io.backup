@@ -23,7 +23,7 @@
         "id": "must_read",
         "title": {
             "zh-CN": "从零开始的教程",
-            "zh-TW": "從零開始的教程",
+            "zh-TW": "從零開始的教學",
             "en": "Tutorial from scratch (only Chinese version now)"
         },
         "summary": {
@@ -32,7 +32,8 @@
             "en": "Must read, help you learn how to this app"
         },
         "content": {
-            "zh": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=must_read&title=从零开始的教程"
+            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=must_read&title=从零开始的教程",
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=must_read&title=從零開始的教學"
         }
     },
     {
@@ -116,7 +117,7 @@
         "id": "what_is_share_helper",
         "title": {
             "zh-CN": "什么是“分享助手”",
-            "zh-TW": "什麼是“分享助手”",
+            "zh-TW": "什麼是「分享助手」",
             "en": "What's \"Share Helper\"?"
         },
         "summary": {
@@ -163,17 +164,17 @@
         "id": "how_to_document",
         "title": {
             "zh-CN": "如何使用文档应用",
-            "zh-TW": "如何使用檔案應用",
+            "zh-TW": "如何使用檔案程式",
             "en": "How to use Document app"
         },
         "summary": {
             "zh-CN": "如何使用文档应用及找不到文档应用要怎么办",
-            "zh-TW": "如何使用檔案應用及找不到檔案應用要怎麼辦",
+            "zh-TW": "如何使用檔案程式及找不到檔案程式要怎麼辦",
             "en": "How to use Document app and how to do if can't find it"
         },
         "content": {
             "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=how_to_document&title=如何使用文档应用",
-            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=how_to_document&title=如何使用檔案應用",
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=how_to_document&title=如何使用檔案程式",
             "en": "https://rikka.app/storage_redirect/docs/en/?doc=how_to_document&title=How%20to%20use%20Document%20app"
         }
     },
