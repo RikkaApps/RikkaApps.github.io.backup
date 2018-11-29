@@ -19,3 +19,7 @@ settings put global hidden_api_blacklist_exemptions \*
 做完后，你需要强行停止 App Ops 设置重启设备。
 
 如果此问题仍然存在，请联系我们。
+
+#### 特别提示
+
+MIUI （可能还有其他 ROM）默认不允许 adb 修改系统设置，你需要在系统的“开发者选项”中开启“USB 调试（安全选项）”或类似选项。

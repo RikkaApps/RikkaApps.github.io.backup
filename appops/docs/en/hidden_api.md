@@ -19,3 +19,7 @@ settings put global hidden_api_blacklist_exemptions \*
 After do this, you need force stop App Ops or even reboot your device.
 
 If this problem still occurs, please contact us.
+
+#### Special Note
+
+MIUI (and possibly other ROMs) do not allow adb to modify system settings by default. You need to enable "USB Debug (Security Options)" or similar options in system's "Developer Options".
