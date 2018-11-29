@@ -8,14 +8,17 @@
     },
     "text": {
         "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font><size value=\"8sp\"><br><br></size>版本 %1$s 包含：<li gap=\"8sp\">首个稳定版本",
+        "zh-TW": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font><size value=\"8sp\"><br><br></size>版本 %1$s 包含：<li gap=\"8sp\">首个穩定版本",
         "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version available</size></font><size value=\"8sp\"><br><br></size>Version %1$s contains:<li gap=\"8sp\">First stable version"
     },
     "download_button": {
         "zh-CN": "下载",
+        "zh-TW": "下載",
         "en": "Download"
     },
     "ignore_button": {
         "zh-CN": "忽略这个版本",
+        "zh-TW": "忽略這個版本",
         "en": "Ignroe this version"
     }
 }
