@@ -97,5 +97,15 @@
             "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=payment&title=購買問題",
             "en": "https://rikka.app/appops/docs/en/?doc=payment&title=Payment%20problems"
         }
+    },
+    {
+        "order": 100,
+        "id": "hidden_api",
+        "hide_from_list": true,
+        "content": {
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=hidden_api&title=关于%20hidden%20API",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=hidden_api&title=關於%20hidden%20API",
+            "en": "https://rikka.app/appops/docs/en/?doc=hidden_api&title=About%20hidden%20API"
+        }
     }
 ]
