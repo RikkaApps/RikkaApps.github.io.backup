@@ -1,24 +1,24 @@
 {
-    "code": 1346,
-    "name": "1.2.1",
+    "code": 1370,
+    "name": "1.2.2",
     "ignoreable": false,
     "download": {
         "url": "https://rikka.app/storage_redirect/",
         "abi": {}
     },
     "text": {
-        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font>",
-        "zh-TW": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font>",
-        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version available</size></font>"
+        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font>",
+        "zh": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font>",
+        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version %s is vailable</size></font>"
     },
     "download_button": {
         "zh-CN": "下载",
-        "zh-TW": "下載",
+        "zh": "下載",
         "en": "Download"
     },
     "ignore_button": {
         "zh-CN": "忽略这个版本",
-        "zh-TW": "忽略這個版本",
+        "zh": "忽略這個版本",
         "en": "Ignroe this version"
     }
 }
