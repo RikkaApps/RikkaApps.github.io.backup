@@ -24,7 +24,7 @@
         "title": {
             "zh-CN": "从零开始的教程",
             "zh-TW": "從零開始的教學",
-            "en": "Tutorial from scratch (only Chinese version now)"
+            "en": "Tutorial from scratch"
         },
         "summary": {
             "zh-CN": "必读，让你学会如何正确使用",
@@ -33,7 +33,8 @@
         },
         "content": {
             "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=must_read&title=从零开始的教程",
-            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=must_read&title=從零開始的教學"
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=must_read&title=從零開始的教學",
+            "en": "https://rikka.app/storage_redirect/docs/en/?doc=must_read&title=Tutorial%20from%20scratch"
         }
     },
     {
