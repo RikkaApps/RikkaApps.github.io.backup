@@ -64,7 +64,6 @@ if (docName) {
     $.ajax({
         url : document.querySelector("meta[name='docs-list-json-url']").getAttribute("content"),
         success: function(result) {
-            var result = JSON.parse(result);
             var listElement = $('#help-list').get(0);
             for (var i = 0; i < result.length; i++) {
                 var itemNode = document.createElement('a');
