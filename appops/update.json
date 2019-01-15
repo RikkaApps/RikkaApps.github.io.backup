@@ -1,13 +1,13 @@
 {
-    "code": 692,
-    "name": "2.5.0",
+    "code": 806,
+    "name": "2.6.3",
     "ignoreable": false,
     "download": {
         "url": "https://github.com/RikkaApps/App-Ops-issue-tracker/releases"
     },
     "text": {
-        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font><size value=\"8sp\"><br><br></size>版本 %1$s 包含：<li gap=\"8sp\">",
-        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version available</size></font><size value=\"8sp\"><br><br></size>Version %1$s contains:<li gap=\"8sp\">"
+        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font>",
+        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version available</size></font>"
     },
     "download_button": {
         "zh-CN": "下载",
