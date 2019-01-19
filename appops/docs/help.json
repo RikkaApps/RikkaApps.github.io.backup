@@ -107,5 +107,15 @@
             "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=hidden_api&title=關於%20hidden%20API",
             "en": "https://rikka.app/appops/docs/en/?doc=hidden_api&title=About%20hidden%20API"
         }
+    },
+    {
+        "order": 101,
+        "id": "run_in_background",
+        "hide_from_list": true,
+        "content": {
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=run_in_background&title=关于“在后台运行”",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=run_in_background&title=關於「在後台運行」",
+            "en": "https://rikka.app/appops/docs/en/?doc=run_in_background&title=About%20%22Run%20in%20background%22"
+        }
     }
 ]
