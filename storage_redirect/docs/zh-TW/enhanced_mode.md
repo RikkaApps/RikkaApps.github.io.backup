@@ -19,6 +19,6 @@
 
 ### 使用 [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445) 
 
-1. 下載 [Riru v11](https://github.com/RikkaApps/Riru/releases/download/v11/magisk-riru-core-arm-arm64-v11.zip)
+1. 下載 [Riru v11](https://github.com/RikkaApps/Riru/releases/download/v11/magisk-riru-core-v11.zip)
 2. 下載 [Riru - Storage Redirect v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip)
 3. 在 Magisk 中安裝這兩個模組

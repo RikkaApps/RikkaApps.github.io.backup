@@ -18,6 +18,6 @@ Due to the need to replace the system files, we **temporarily** only provide [Ma
 
 ### Use [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445)
 
-1. Download [Riru v11](https://github.com/RikkaApps/Riru/releases/download/v11/magisk-riru-core-arm-arm64-v11.zip)
+1. Download [Riru v11](https://github.com/RikkaApps/Riru/releases/download/v11/magisk-riru-core-v11.zip)
 2. Download [Riru - Storage Redirect v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip)
 3. Install these two modules in Magisk
