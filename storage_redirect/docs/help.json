@@ -97,6 +97,7 @@
     {
         "order": 5,
         "id": "enhance_module",
+        "hide_from_list": true,
         "title": {
             "zh-CN": "增强模块",
             "zh-TW": "增強模組",
