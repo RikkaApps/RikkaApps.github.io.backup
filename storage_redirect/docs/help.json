@@ -223,6 +223,21 @@
         }
     },
     {
+        "order": 103,
+        "id": "enhanced_mode",
+        "hide_from_list": true,
+        "title": {
+            "zh-CN": "增强模式",
+            "zh-TW": "增強模式",
+            "en": "Enhanced mode"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=enhanced_mode&title=增强模式",
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=enhanced_mode&title=增強模式",
+            "en": "https://rikka.app/storage_redirect/docs/en/?doc=enhanced_mode&title=Enhanced%20mode"
+        }
+    },
+    {
         "order": 10000,
         "id": "browse_redirected_files_from_doc_ui",
         "hide_from_list": true,
