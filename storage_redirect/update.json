@@ -1,14 +1,14 @@
 {
-    "code": 1471,
-    "name": "1.4.2",
-    "ignoreable": true,
+    "code": 1473,
+    "name": "1.4.3",
+    "ignoreable": false,
     "download": {
         "url": "https://rikka.app/storage_redirect/",
         "abi": {}
     },
     "text": {
-        "zh": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font><br>目前 Google Play 似乎不能及时提供新版本，如果你想使用新版本请临时从我们的网站下载。",
-        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version %s is vailable</size></font><br>It seems that Google Play does not currently provide new versions in time. If you want to use the new version, please temporarily download it from our website."
+        "zh": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font>",
+        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version %s is vailable</size></font>"
     },
     "download_button": {
         "zh-CN": "下载",
@@ -19,6 +19,5 @@
         "zh-CN": "忽略这个版本",
         "zh": "忽略這個版本",
         "en": "Ignroe this version"
-    },
-    "ignore_google_play": true
+    }
 }
