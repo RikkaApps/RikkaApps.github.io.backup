@@ -12,11 +12,17 @@ The version 17 of the module introduces working method, using `socket`, no longe
 
 However, the reliability of this new working method (2019/2/7) has not been widely verified and cannot be guaranteed to be available on your device. If you have problems (such as can't open redirected apps), you can temporarily use [v16](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-arm-arm64-v16.zip) Module to get back to the previous working mode.
 
+## Compatibility Report
+
+According to user reports, the current module seems to be incompatible with "TaiChi·Magisk". Once the problem occurs, you will find that the redirect count is always 0.
+
+**This is not our problem, and it is impossible for us to solve this problem alone. Please choose your own.**
+
 ## Download and install
 
 Due to the need to replace the system files, we **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445) modules.
 
-### Use [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445)
+### Magisk modules
 
 1. Download [Riru v11](https://github.com/RikkaApps/Riru/releases/download/v11/magisk-riru-core-v11.zip)
 2. Download [Riru - Storage Redirect v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip)
