@@ -1,15 +1,15 @@
 {
-    "code": 1456,
-    "name": "1.4.0 beta",
+    "code": 1458,
+    "name": "1.4.1 beta",
     "ignoreable": true,
     "download": {
         "url": "https://rikka.app/storage_redirect/",
         "abi": {}
     },
     "text": {
-        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font><br>非常早期新测试版，目前只在 Google Play 提供，请在 Google Play 加入测试",
-        "zh": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font><br>非常早期新測試版，目前只在 Google Play 提供，請在 Google Play 加入測試",
-        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version %s is vailable</size></font><br>Early stage new beta, currently only available on Google Play, please join test in Google Play"
+        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font><br>非常早期新测试版，目前只在 Google Play 提供，若想试用新版请在 Google Play 加入测试<br><br>1.4.0 版本有问题，请务必确认 Google Play 提供的版本为 1.4.1 再更新",
+        "zh": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font><br>非常早期新測試版，目前只在 Google Play 提供，請在 Google Play 加入測試<br><br>1.4.0 版本有問題，請務必確認 Google Play 提供的版本為 1.4.1 再更新",
+        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version %s is vailable</size></font><br>Early stage new beta, currently only available on Google Play, please join test in Google Play<br><br>There is a problem with the 1.4.0 version. Please make sure that the version provided by Google Play is 1.4.1 before update"
     },
     "download_button": {
         "zh-CN": "下载",
