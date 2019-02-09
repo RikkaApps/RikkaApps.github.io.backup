@@ -1,11 +1,5 @@
 # Enhanced mode
 
-## Before you install
-
-1. Make sure you know how to delete the module when you are unable to enter the system
-2. Just in case, please backup your whole device data first
-3. If there are pre-v12 modules, they must be deleted
-
 ## About module v17 
 
 The version 17 of the module introduces working method, using `socket`, no longer relying on `logcat`. This means that there will be no longer problems on some of the devices with `logcat` problems.
@@ -14,13 +8,19 @@ However, the reliability of this new working method (2019/2/7) has not been wide
 
 ## Compatibility Report
 
-According to user reports, the current module seems to be incompatible with "TaiChi·Magisk". Once the problem occurs, you will find that the redirect count is always 0.
+According to user reports and verification, “TaiChi·Magisk” will break the functionality of Riru (Enhancement module is based on Riru). Once a problem occurs, you will find that the number of redirects is always 0.
 
 **This is not our problem, and it is impossible for us to solve this problem alone. Please choose your own.**
 
 ## Download and install
 
 Due to the need to replace the system files, we **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445) modules.
+
+### Before you install
+
+1. Make sure you know how to delete the module when you are unable to enter the system
+2. Just in case, please backup your whole device data first
+3. If there are pre-v12 modules, they must be deleted
 
 ### Magisk modules
 
