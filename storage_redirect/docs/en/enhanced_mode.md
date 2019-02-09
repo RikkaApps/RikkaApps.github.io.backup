@@ -34,7 +34,7 @@ Due to the need to replace the system files, we **temporarily** only provide [Ma
 
 ### Restart zygote
 
-On a small number of devices, zygote starts Magisk file replacement, so Riru won't work. We provide a "restart zygote module" a temporary solution.
+On a small number of devices, zygote starts early than Magisk file replacement, so Riru won't work. We provide a "restart zygote module" a temporary solution.
 
 This module will restart zygote in the late_start service script provided by Magisk.
 

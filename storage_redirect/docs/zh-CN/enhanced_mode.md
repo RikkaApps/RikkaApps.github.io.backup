@@ -34,7 +34,7 @@
 
 ### 重新启动 zygote
 
-在少部分设备上，zygote 启动 Magisk 文件替换，因此 Riru 就无法发挥作用。提供一个“重新启动 zygote 模块”作为临时解决方案。
+在少部分设备上，zygote 启动早于 Magisk 文件替换，因此 Riru 就无法发挥作用。提供一个“重新启动 zygote 模块”作为临时解决方案。
 
 这个模块会在 Magisk 提供的 late_start service script 中重新启动 zygote。
 
