@@ -8,9 +8,13 @@ However, the reliability of this new working method (2019/2/7) has not been wide
 
 ## Compatibility Report
 
-According to user reports and verification, “TaiChi·Magisk” will break the functionality of Riru (Enhancement module is based on Riru). Once a problem occurs, you will find that the number of redirects is always 0.
+* "TaiChi·Magisk"
 
-**This is not our problem, and it is impossible for us to solve this problem alone. Please choose your own.**
+  According to user reports and verification, "TaiChi·Magisk" will break the functionality of Riru (Enhancement module is based on Riru). Once a problem occurs, you will find that the number of redirects is always 0.
+
+  **This is not our problem, and it is impossible for us to solve this problem alone. Please choose your own.**
+
+* Can't use camera on ZUK Z2 (camera daemon not start)
 
 ## Download and install
 
@@ -27,3 +31,13 @@ Due to the need to replace the system files, we **temporarily** only provide [Ma
 1. Download [Riru v11](https://github.com/RikkaApps/Riru/releases/download/v11/magisk-riru-core-v11.zip)
 2. Download [Riru - Storage Redirect v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip)
 3. Install these two modules in Magisk
+
+### Restart zygote
+
+On a small number of devices, zygote starts Magisk file replacement, so Riru won't work. We provide a "restart zygote module" a temporary solution.
+
+This module will restart zygote in the late_start service script provided by Magisk.
+
+**If your device dose not have this problem, you do not need to use this module.**
+
+[Riru - Restart zygote](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-restart-zygote.zip)

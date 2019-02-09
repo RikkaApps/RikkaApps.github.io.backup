@@ -8,9 +8,13 @@
 
 ## 兼容性报告
 
-根据用户报告和验证，“TaiChi·Magisk”会破坏 Riru 的功能（增强模块基于 Riru）。一旦出现问题，你会发现重定向次数一直为 0。
+* “TaiChi·Magisk”
 
-**这不是我们的问题，仅凭我们也不可能解决这个问题。请自行取舍。**
+  根据用户报告和验证，“TaiChi·Magisk”会破坏 Riru 的功能（增强模块基于 Riru）。一旦出现问题，你会发现重定向次数一直为 0。
+
+  **这不是我们的问题，仅凭我们也不可能解决这个问题。请自行取舍。**
+
+* ZUK Z2 无法启动相机（camera daemon not start）
 
 ## 下载和安装
 
@@ -27,3 +31,13 @@
 1. 下载 [Riru v11](https://github.com/RikkaApps/Riru/releases/download/v11/magisk-riru-core-v11.zip)
 2. 下载 [Riru - Storage Redirect v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip)
 3. 在 Magisk 中安装这两个模块
+
+### 重新启动 zygote
+
+在少部分设备上，zygote 启动 Magisk 文件替换，因此 Riru 就无法发挥作用。提供一个“重新启动 zygote 模块”作为临时解决方案。
+
+这个模块会在 Magisk 提供的 late_start service script 中重新启动 zygote。
+
+**如果你的设备没有遇到问题则不需要使用这个模块。**
+
+[Riru - Restart zygote](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-restart-zygote.zip)
