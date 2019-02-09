@@ -39,6 +39,6 @@
 
 這個模組會在 Magisk 提供的 late_start service script 中重新啟動 zygote。
 
-**如果你的裝置沒有遇到問題則不需要使用這個模組。**
+**如果你的裝置沒有遇到問題（沒有看到需要使用這個的提示），則不需要使用這個模組。**
 
 [Riru - Restart zygote](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-restart-zygote.zip)

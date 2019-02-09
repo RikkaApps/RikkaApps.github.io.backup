@@ -38,6 +38,6 @@ On a small number of devices, zygote starts Magisk file replacement, so Riru won
 
 This module will restart zygote in the late_start service script provided by Magisk.
 
-**If your device dose not have this problem, you do not need to use this module.**
+**If your device dose not have this problem (not see prompt to use this), you do not need to use this module.**
 
 [Riru - Restart zygote](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-restart-zygote.zip)

@@ -38,6 +38,6 @@
 
 这个模块会在 Magisk 提供的 late_start service script 中重新启动 zygote。
 
-**如果你的设备没有遇到问题则不需要使用这个模块。**
+**如果你的设备没有遇到问题（没有看到需要使用这个的提示），则不需要使用这个模块。**
 
 [Riru - Restart zygote](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-restart-zygote.zip)
