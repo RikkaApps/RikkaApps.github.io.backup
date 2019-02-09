@@ -1,14 +1,14 @@
 {
-    "code": 1474,
-    "name": "1.4.4",
+    "code": 1482,
+    "name": "1.4.5",
     "ignoreable": false,
     "download": {
         "url": "https://rikka.app/storage_redirect/",
         "abi": {}
     },
     "text": {
-        "zh": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font><br>1.4.2 和 1.4.3 无法正常使用，请更新到 1.4.4（如果商店没有更新，请暂时直接从 Github Release 下载）",
-        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version %s is vailable</size></font><br>1.4.2 and 1.4.3 can't work properly, please update to 1.4.4 (If not updated in Play Store, please download it directly from Github Release)"
+        "zh": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 %s 可用</size></font>",
+        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version %s is vailable</size></font>"
     },
     "download_button": {
         "zh-CN": "下载",
@@ -20,5 +20,5 @@
         "zh": "忽略這個版本",
         "en": "Ignroe this version"
     },
-    "ignore_google_play": "true"
+    "ignore_google_play": "false"
 }
