@@ -1,31 +1,25 @@
 # 兼容性报告
 
-## su 兼容性
-
-确认支持的 su：
-
-* Magisk
-* SuperSU
-* LineageOS addonsu
-
-确认不支持的 su：
-
-* Flyme（魅族设备）内置 su
-  
-  所有 su 出来的进程都将在离开应用后被 kill，但“存储重定向”需要一个一直运行的进程
-
-## 设备兼容性
-
-### Samsung 设备
+## Samsung 设备
 
 目前已确认 Samsung Galaxy S7 edge 一定不能使用 arm64 版本（在关于中可以看到安装的版本，从 Google Play 下载一定是 arm64 版），症状为服务无法启动甚至设备重启。如果你使用了 arm64 版本请卸载并从 [我们的网站](https://rikka.app/storage_redirect) 选择下载 arm 版本。
 
 如果你使用其他 Samsung 设备遇到问题，可以尝试使用 arm 版本。
 
+## 华为设备
+
+由于华为内核的实现（这意味着不可能被解决），导致 SELinux 规则 patch 无法工作（目前实现需要增加部分规则）。这个问题应该只在比较新的华为设备上出现（这个问题由一个 Huawei Mate 20 Pro 用户报告）。
+
+## 魅族设备
+
+根据用户报告，目前魅族设备只有内置 root 可用，但通过内置 root 运行的进程都将在离开应用后被 kill，但“存储重定向”需要一个一直运行的进程。
+
 ## 其他问题
 
 ### log 被关闭问题
 
+> 如果你使用“增强模块” v17 及以上，即时 log 被关闭也可以正常使用
+
 在“开发者设置”中检查 log 是否开启。
 
-另外，据用户反馈，在 Huawei EMUI 上 log 默认关闭 log。如果你在使用 EMUI，请自行查询如何在 EMUI 上开启 log。
+另外，据用户反馈，在华为 EMUI 上 log 默认关闭 log。如果你在使用 EMUI，请自行查询如何在 EMUI 上开启 log。
