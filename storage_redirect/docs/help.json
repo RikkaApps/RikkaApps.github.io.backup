@@ -95,26 +95,6 @@
         }
     },
     {
-        "order": 5,
-        "id": "enhance_module",
-        "hide_from_list": true,
-        "title": {
-            "zh-CN": "增强模块",
-            "zh-TW": "增強模組",
-            "en": "Enhancement module"
-        },
-        "summary": {
-            "zh-CN": "解决被重定向的应用仍不时创建文件等",
-            "zh-TW": "解決被重新導向的程式仍不時建立檔案等",
-            "en": "Solve the problem that redirected apps still create files sometimes, and more"
-        },
-        "content": {
-            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=增强模块",
-            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=增強模組",
-            "en": "https://rikka.app/storage_redirect/docs/en/?doc=Enhance%20module"
-        }
-    },
-    {
         "order": 6,
         "id": "what_is_share_helper",
         "title": {
@@ -236,6 +216,26 @@
             "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=enhanced_mode&title=增强模式",
             "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=enhanced_mode&title=增強模式",
             "en": "https://rikka.app/storage_redirect/docs/en/?doc=enhanced_mode&title=Enhanced%20mode"
+        }
+    },
+    {
+        "order": 104,
+        "id": "enhance_module",
+        "hide_from_list": true,
+        "title": {
+            "zh-CN": "增强模块（v1.3.x 及之前）",
+            "zh-TW": "增強模組（v1.3.x 及之前）",
+            "en": "Enhancement module (for pre-v1.3.x)"
+        },
+        "summary": {
+            "zh-CN": "解决被重定向的应用仍不时创建文件等",
+            "zh-TW": "解決被重新導向的程式仍不時建立檔案等",
+            "en": "Solve the problem that redirected apps still create files sometimes, and more"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=增强模块",
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=增強模組",
+            "en": "https://rikka.app/storage_redirect/docs/en/?doc=Enhance%20module"
         }
     },
     {
