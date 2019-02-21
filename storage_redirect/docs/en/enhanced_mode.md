@@ -10,11 +10,11 @@ However, the reliability of this new working method (2019/2/7) has not been wide
 
 * "TaiChi·Magisk"
 
-  According to user reports and verification, "TaiChi·Magisk" will break the functionality of Riru (Enhancement module is based on Riru). Once a problem occurs, you will find that the number of redirects is always 0.
+  You need to upgrade "TaiChi·Magisk" to 4.6.0 or higher. Depending on the user's return, it may be necessary to reboot twice.
 
-  **This is not our problem, and it is impossible for us to solve this problem alone. Please choose your own.**
+* Can't use camera on ZUK Z2
 
-* Can't use camera on ZUK Z2 (camera daemon not start)
+  This issue was reported by ZUK Z2 users using AEX 6.2 and said AEX 6.3 has no problem.
 
 ## Download and install
 
@@ -28,9 +28,10 @@ Due to the need to replace the system files, we **temporarily** only provide [Ma
 
 ### Magisk modules
 
-1. Download [Riru v11](https://github.com/RikkaApps/Riru/releases/download/v11/magisk-riru-core-v11.zip)
+1. Download [Riru v15](https://github.com/RikkaApps/Riru/releases/download/v15/magisk-riru-core-v15.zip)
 2. Download [Riru - Storage Redirect v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip)
 3. Install these two modules in Magisk
+4. Optionally, download [check app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) to check if Riru works
 
 ### Restart zygote
 
@@ -40,4 +41,4 @@ This module will restart zygote in the late_start service script provided by Mag
 
 **If your device dose not have this problem (not see prompt to use this), you do not need to use this module.**
 
-[Riru - Restart zygote](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-restart-zygote.zip)
+> Built-in from Riru v14
