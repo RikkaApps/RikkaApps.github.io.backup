@@ -4,13 +4,15 @@
 
 The version 17 of the module introduces working method, using `socket`, no longer relying on `logcat`. This means that there will be no longer problems on some of the devices with `logcat` problems.
 
-However, the reliability of this new working method (2019/2/7) has not been widely verified and cannot be guaranteed to be available on your device. If you have problems (such as can't open redirected apps), you can temporarily use [v16](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-arm-arm64-v16.zip) Module to get back to the previous working mode.
+However, the reliability of this new working method (2019/2/7) has not been widely verified and cannot be guaranteed to be available on your device. If you have problems (such as can't open redirected apps), please use logcat to grab the log and send it to us.
 
 ## Compatibility Report
 
 * "TaiChi·Magisk"
 
-  You need to upgrade "TaiChi·Magisk" to 4.6.0 or higher. Depending on the user's return, it may be necessary to reboot twice.
+  According to the user's return, it seems currently (2019/3/4) there is still a problem that cannot be used at the same time. Please **use the following test app to confirm work status**. If there is a problem, you may have to make a choose.
+
+  **This issue can only be resolved by TaiChi.**
 
 * Can't use camera on ZUK Z2
 
