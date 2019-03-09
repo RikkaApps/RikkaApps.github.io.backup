@@ -28,7 +28,7 @@ We **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/m
 2. Just in case, please backup your whole device data first
 3. If there are pre-v12 modules, they must be deleted
 
-## Version corresponding
+### Version corresponding
 
 | App Version | Module Version | Riru Version |
 | ----------- | -------------- | ------------ |
