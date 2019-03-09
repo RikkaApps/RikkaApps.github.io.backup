@@ -57,6 +57,7 @@ body.night-theme {
 .night-theme .markdown-body table th,
 .night-theme .markdown-body table td {
   border: 1px solid #dfe2e5;
+  background-color: #303030;
 }
   
 .night-theme .markdown-body table tr {
@@ -65,7 +66,7 @@ body.night-theme {
 }
   
 .night-theme .markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: #212121;
 }
   
 .night-theme .markdown-body img {
