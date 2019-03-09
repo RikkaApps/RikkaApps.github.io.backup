@@ -1,12 +1,6 @@
 # 增强模式
 
-## 关于模块 v17
-
-版本 17 模块引入了全新的工作方式，使用 `socket`，不再需要依赖 `logcat`。这意味着，在部分 `logcat` 有问题的设备上不再会有问题。
-
-但目前（2019/2/7）这个新的工作方式的可靠性还没有得到广泛验证，不能保证一定在你的设备上可用。如果你遇到问题（比如打不开被重定向的应用），请使用 logcat 抓取 log 发送给我们。
-
-## 兼容性报告
+## 兼容性
 
 * “TaiChi·Magisk”
 
@@ -18,9 +12,26 @@
   
   这个问题由使用 AEX 6.2 的 ZUK Z2 用户报告，并称 AEX 6.3 没有问题。
 
+## 版本对应
+
+| 应用版本    | 模块版本 | Riru 版本 |
+| ----------- | -------- | --------- |
+| 1.5.0+      | v18+     | v16+      |
+| 1.4.0-1.4.9 | v17      | any       |
+
+**注意，版本必须严格对应，否则最坏可能出现 bootloop。更早版本不再支持。**
+
+## 关于模块 v18
+
+鉴于部分用户不会主动开启模块的功能，v18 起默认全部开启。
+
+## 关于模块 v17
+
+版本 17 模块引入了全新的工作方式，使用 `socket`，不再需要依赖 `logcat`。这意味着，在部分 `logcat` 有问题的设备上不再会有问题。如果你遇到问题（比如打不开被重定向的应用），请使用 logcat 抓取 log 发送给我们。
+
 ## 下载和安装
 
-由于需要替换系统文件，我们**暂时**只提供 [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445) 模块。
+我们暂时只提供 [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445) 模块，因为只有 Magisk 可以提供可靠的开机时执行脚本。
 
 ### 安装前须知
 
@@ -30,8 +41,8 @@
 
 ### Magisk 模块
 
-1. 下载 [Riru v15](https://github.com/RikkaApps/Riru/releases/download/v15/magisk-riru-core-v15.zip)
-2. 下载 [Riru - Storage Redirect v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip)
+1. 下载 [Riru v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip)
+2. 下载 [Riru - Storage Redirect v18](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v18.zip) ([v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip))
 3. 在 Magisk 中安装这两个模块
 4. 可选，下载 [检测 app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) 来检查 Riru 是否正常工作
    

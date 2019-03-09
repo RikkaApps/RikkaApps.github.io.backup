@@ -1,23 +1,23 @@
 
 # 增強模式
 
-## 關於模組 v17
-
-版本 17 模組引入了全新的工作方式，使用 `socket`，不再需要依賴 `logcat`。這意味著，在部分 `logcat` 有問題的裝置上不再會有問題。
-
-但目前（2019/2/7）這個新的工作方式的可靠性還沒有得到廣泛驗證，不能保證一定在你的裝置上可用。如果你遇到問題（比如打不開被重新導向的應用程式），請使用 logcat 抓取 log 傳送給我們。
-
-## 相容性報告
+## 相容性
 
 * 「TaiChi·Magisk」
 
   根據使用者回報，目前（2019/3/4）似乎仍有不能同時使用的情況。請**使用下面的檢測 app 確認執行情況**，如果出現問題請自行取捨。
 
-  **這個問題只可能由 TaiChi 方面解決。**
-
 * ZUK Z2 無法啟動相機
   
   這個問題由使用 AEX 6.2 的 ZUK Z2 使用者報告，並稱 AEX 6.3 沒有問題。
+
+## 關於模組 v18
+
+鑑於部分使用者不會主動開啟模組的功能，v18 起預設全部開啟。
+
+## 關於模組 v17
+
+版本 17 模組引入了全新的工作方式，使用 `socket`，不再需要依賴 `logcat`。這意味著，在部分 `logcat` 有問題的裝置上不再會有問題。如果你遇到問題（比如打不開被重新導向的應用程式），請使用 logcat 抓取 log 傳送給我們。
 
 ## 下載和安裝
 
@@ -29,10 +29,19 @@
 2. 以防萬一，請先備份整個裝置的資料
 3. 如果有 v12 以前的模組，必須刪除
 
+## 版本對應
+
+| 應用程式版本    | 模組版本 | Riru 版本 |
+| ----------- | -------- | --------- |
+| 1.5.0+      | v18+     | v16+      |
+| 1.4.0-1.4.9 | v17      | any       |
+
+**注意，版本必須嚴格對應，否則最壞可能出現 bootloop。更早版本不再支援。**
+
 ### Magisk 模組
 
-1. 下載 [Riru v15](https://github.com/RikkaApps/Riru/releases/download/v15/magisk-riru-core-v15.zip)
-2. 下載 [Riru - Storage Redirect v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip)
+1. 下載 [Riru v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip)
+2. 下載 [Riru - Storage Redirect v18](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v18.zip) ([v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip))
 3. 在 Magisk 中安裝這兩個模組
 4. 可選，下載 [檢測 app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) 來檢查 Riru 是否正常工作
 
