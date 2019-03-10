@@ -6,8 +6,6 @@
 
   根据用户回报，目前（2019/3/4）似乎仍有不能同时使用的情况。请**使用下面的检测 app 确认运行情况**，如果出现问题请自行取舍。
 
-  **这个问题只可能由 TaiChi 方面解决。**
-
 * ZUK Z2 无法启动相机
   
   这个问题由使用 AEX 6.2 的 ZUK Z2 用户报告，并称 AEX 6.3 没有问题。
@@ -41,7 +39,7 @@
 
 ### Magisk 模块
 
-1. 下载 [Riru v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip)
+1. 下载 [Riru v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip) （如果要使用 v18 必须升级到 v16，否则 bootloop）
 2. 下载 [Riru - Storage Redirect v18](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v18.zip) ([v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip))
 3. 在 Magisk 中安装这两个模块
 4. 可选，下载 [检测 app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) 来检查 Riru 是否正常工作
