@@ -32,15 +32,15 @@
 
 | 应用版本    | 模块版本 | Riru 版本 |
 | ----------- | -------- | --------- |
-| 1.5.0+      | v18+     | v16+      |
+| 1.5.0+      | v18.1+   | v16+      |
 | 1.4.0-1.4.9 | v17      | any       |
 
 **注意，版本必须严格对应，否则最坏可能出现 bootloop。更早版本不再支持。**
 
 ### Magisk 模块
 
-1. 下载 [Riru v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip) （如果要使用 v18 必须升级到 v16，否则 bootloop）
-2. 下载 [Riru - Storage Redirect v18](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v18.zip) ([v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip))
+1. 下载 [Riru - Core v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip) （如果要使用 v18.1，Core 必须升级到 v16，否则 bootloop）
+2. 下载 [Riru - Storage Redirect v18.1](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v18.1.zip) ([v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip))
 3. 在 Magisk 中安装这两个模块
 4. 可选，下载 [检测 app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) 来检查 Riru 是否正常工作
    
