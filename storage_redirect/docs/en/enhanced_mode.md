@@ -30,17 +30,19 @@ We **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/m
 
 ### Version corresponding
 
-| App Version | Module Version | Riru Version |
-| ----------- | -------------- | ------------ |
-| 1.5.0+      | v18.1+         | v16+         |
-| 1.4.0-1.4.9 | v17            | any          |
+| App Version    | Riru - Storage Redirect Version | Riru - Core Version |
+| -------------- | ------------------------------- | ------------------- |
+| 1.5.2+         | v19+                            | v16+                |
+| 1.5.0-1.5.1    | v18.1                           | v16+                |
+| 1.4.0-1.4.9    | v17                             | any                 |
+| Early versions | No longer supported             |                     |
 
-**Note that the version must correspond exactly, otherwise the bootloop may be the worst. Earlier versions are no longer supported.**
+**Note that the version must correspond exactly, otherwise functions may not work properly, or the worst device can't boot.**
 
 ### Magisk modules
 
-1. Download [Riru - Core v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip) (for v18.1, Core must be upgraded to v16, otherwise bootloop)
-2. Download [Riru - Storage Redirect v18.1](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v18.1.zip) ([v17](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v17.zip))
+1. Download [Riru - Core v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip) (for v18+, Core must be upgraded to v16, otherwise your device will not boot)
+2. Download [Riru - Storage Redirect v19](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.zip)
 3. Install these two modules in Magisk
 4. Optionally, download [check app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) to check if Riru works
 
