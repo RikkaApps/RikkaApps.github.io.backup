@@ -41,10 +41,10 @@ We **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/m
 
 ### Magisk modules
 
-1. Download [Riru - Core v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip)
-2. Download [Riru - Storage Redirect v19.1](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.1.zip) (from v18+, Core must be upgraded to v16, otherwise your device will not boot)
+1. Download [Riru - Core v17](https://github.com/RikkaApps/Riru/releases/download/v17/magisk-riru-core-v17.zip)
+2. Download [Riru - Storage Redirect v19.1](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.1.zip) (from v18+, Core must be upgraded to v16 or above, otherwise your device will not boot)
 3. Install these two modules in Magisk
-4. Optionally, download [check app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) to check if Riru works
+4. Optionally, download [check app](https://github.com/RikkaApps/Riru/releases/download/v17/app-release.apk) to check if Riru works
 
 ### Restart zygote
 

@@ -42,10 +42,10 @@
 
 ### Magisk 模組
 
-1. 下載 [Riru - Core v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip)
-2. 下載 [Riru - Storage Redirect v19.1](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.1.zip)（如果要使用 v18 及以上版本，Core 必須升級到 v16，否則無法開機）
+1. 下載 [Riru - Core v17](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v17.zip)
+2. 下載 [Riru - Storage Redirect v19.1](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.1.zip)（如果要使用 v18 及以上版本，Core 必須升級到 v16 及以上，否則無法開機）
 3. 在 Magisk 中安裝這兩個模組
-4. 可選，下載 [檢測 app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) 來檢查 Riru 是否正常工作
+4. 可選，下載 [檢測 app](https://github.com/RikkaApps/Riru/releases/download/v17/app-release.apk) 來檢查 Riru 是否正常工作
 
 ### 重新啟動 zygote
 
