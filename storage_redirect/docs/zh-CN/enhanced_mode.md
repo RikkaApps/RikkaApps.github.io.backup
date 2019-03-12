@@ -41,8 +41,8 @@
 
 ### Magisk 模块
 
-1. 下载 [Riru - Core v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip) （如果要使用 v18 及以上版本，Core 必须升级到 v16，否则无法开机）
-2. 下载 [Riru - Storage Redirect v19](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.zip)
+1. 下载 [Riru - Core v16](https://github.com/RikkaApps/Riru/releases/download/v16/magisk-riru-core-v16.zip) 
+2. 下载 [Riru - Storage Redirect v19](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.zip)（如果要使用 v18 及以上版本，Core 必须升级到 v16，否则无法开机）
 3. 在 Magisk 中安装这两个模块
 4. 可选，下载 [检测 app](https://github.com/RikkaApps/Riru/releases/download/v15/app-release.apk) 来检查 Riru 是否正常工作
    
