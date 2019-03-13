@@ -1,5 +1,5 @@
 {
-    "code": 1558,
+    "code": 1559,
     "name": "1.5.5",
     "ignoreable": false,
     "download": {
@@ -20,5 +20,5 @@
         "zh": "忽略這個版本",
         "en": "Ignroe this version"
     },
-    "ignore_google_play": "false"
+    "ignore_google_play": "true"
 }
