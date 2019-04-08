@@ -39,6 +39,25 @@
     },
     {
         "order": 2,
+        "id": "technical_details",
+        "title": {
+            "zh-CN": "技术细节",
+            "zh-TW": "技術細節",
+            "en": "Technical details"
+        },
+        "summary": {
+            "zh-CN": "了解本应用的技术细节（为高级用户准备）",
+            "zh-TW": "瞭解本應用程式的技術細節（為高階使用者準備）",
+            "en": "Learn the technical details of this application (for advanced users)"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=technical_details&title=技术细节",
+            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=technical_details&title=技術細節",
+            "en": "https://rikka.app/storage_redirect/docs/en/?doc=technical_details&title=Technical%20details"
+        }
+    },
+    {
+        "order": 3,
         "id": "faq",
         "title": {
             "zh-CN": "常见问题",
@@ -57,7 +76,7 @@
         }
     },
     {
-        "order": 3,
+        "order": 4,
         "id": "about_redirect",
         "title": {
             "zh-CN": "关于重定向",
@@ -76,7 +95,7 @@
         }
     },
     {
-        "order": 4,
+        "order": 5,
         "id": "about_link",
         "title": {
             "zh-CN": "关于链接",
