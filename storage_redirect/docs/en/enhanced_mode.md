@@ -32,7 +32,8 @@ We **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/m
 
 | App Version    | Riru - Storage Redirect Version | Riru - Core Version |
 | -------------- | ------------------------------- | ------------------- |
-| 1.5.2+         | v19+                            | v16+                |
+| 1.6.3+         | v19.3+                          | v18+                |
+| 1.5.2+         | v19.x                           | v16+                |
 | 1.5.0-1.5.1    | v18.1                           | v16+                |
 | 1.4.0-1.4.9    | v17                             | any                 |
 | Early versions | No longer supported             |                     |
@@ -41,8 +42,8 @@ We **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/m
 
 ### Magisk modules
 
-1. Download [Riru - Core v17.1](https://github.com/RikkaApps/Riru/releases/download/v17.1/magisk-riru-core-v17.1.zip)
-2. Download [Riru - Storage Redirect v19.1](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.1.zip) (from v18+, Core must be upgraded to v16 or above, otherwise your device will not boot)
+1. Download [Riru - Core v18](https://github.com/RikkaApps/Riru/releases/download/v18/magisk-riru-core-v18.zip)
+2. Download [Riru - Storage Redirect v19.3](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.3.zip) (from v19.3+, Core must be upgraded to v18 or above, otherwise your device will not boot)
 3. Install these two modules in Magisk
 4. Optionally, download [check app](https://github.com/RikkaApps/Riru/releases/download/v17/app-release.apk) to check if Riru works
 
