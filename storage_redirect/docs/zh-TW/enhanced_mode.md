@@ -1,27 +1,44 @@
-
 # 增強模式
 
+<!-- TOC depthFrom:2 depthTo:3 -->
+
+- [相容性](#相容性)
+- [效能影響](#效能影響)
+- [下載和安裝](#下載和安裝)
+    - [安裝前須知](#安裝前須知)
+    - [版本對應](#版本對應)
+    - [Magisk 模組](#magisk-模組)
+    - [重新啟動 zygote](#重新啟動-zygote)
+
+<!-- /TOC -->
+
 ## 相容性
+
+支援 Android 6.0 - Android Q DP2
+
+#### 其他特殊情況
 
 * 「TaiChi·Magisk」
 
   根據使用者回報，目前（2019/3/4）似乎仍有不能同時使用的情況。請**使用下面的檢測 app 確認執行情況**，如果出現問題請自行取捨。
 
-* ZUK Z2 無法啟動相機
+## 效能影響
+
+* 應用程式啟動時間增加
+
+  > 在 Google Pixel 2 上增加大約 0.025 秒，其中 0.010 秒來自檔案監視，0.015 秒來自修復應用程式間互動
+
+* 修復應用程式間互動（只在開啟重新導向的應用程式生效）
   
-  這個問題由使用 AEX 6.2 的 ZUK Z2 使用者報告，並稱 AEX 6.3 沒有問題。
+  在應用程式使用 ActivityManager 及與 Media Store 互動時產生可以忽略不記的開銷
 
-## 關於模組 v18
+* 檔案監視（在所有應用程式生效）
 
-鑑於部分使用者不會主動開啟模組的功能，v18 起預設全部開啟。
-
-## 關於模組 v17
-
-版本 17 模組引入了全新的工作方式，使用 `socket`，不再需要依賴 `logcat`。這意味著，在部分 `logcat` 有問題的裝置上不再會有問題。如果你遇到問題（比如打不開被重新導向的應用程式），請使用 logcat 抓取 log 傳送給我們。
+  傳送記錄會產生開銷，但理論上與 Android 的 log 機制消耗一致（可以忽略不記）
 
 ## 下載和安裝
 
-由於需要替換系統檔案，我們**暫時**只提供 [Magisk](https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445) 模組。
+我們暫時只提供 [Magisk](https://github.com/topjohnwu/Magisk) 模組，因為只有 Magisk 可以提供**可靠的**開機時執行 script。
 
 ### 安裝前須知
 
@@ -32,7 +49,7 @@
 ### 版本對應
 
 | 應用程式版本 | Riru - Storage Redirect 版本 | Riru - Core 版本 |
-| ------------ | ---------------------------- | ---------------- |
+|--------------|------------------------------|------------------|
 | 1.6.3+       | v19.3+                       | v18+             |
 | 1.5.2+       | v19.x                        | v16+             |
 | 1.5.0-1.5.1  | v18.1                        | v16+             |
@@ -44,16 +61,10 @@
 ### Magisk 模組
 
 1. 下載 [Riru - Core v18](https://github.com/RikkaApps/Riru/releases/download/v18/magisk-riru-core-v18.zip)
-2. 下載 [Riru - Storage Redirect v19.3](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.3.zip)（如果要使用 v19.3 及以上版本，Core 必須升級到 v18 及以上，否則無法開機）
+2. 下載 [Riru - Storage Redirect v19.3](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.3.zip)
 3. 在 Magisk 中安裝這兩個模組
 4. 可選，下載 [檢測 app](https://github.com/RikkaApps/Riru/releases/download/v17/app-release.apk) 來檢查 Riru 是否正常工作
 
 ### 重新啟動 zygote
-
-在少部分裝置上，zygote 啟動早於 Magisk 檔案替換，因此 Riru 就無法發揮作用。提供一個「重新啟動 zygote 模組」作為臨時解決方案。
-
-這個模組會在 Magisk 提供的 late_start service script 中重新啟動 zygote。
-
-**如果你的裝置沒有遇到問題（沒有看到需要使用這個的提示），則不需要使用這個模組。**
 
 > Riru v14 起內建此功能
