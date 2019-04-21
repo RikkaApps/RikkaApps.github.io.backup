@@ -76,8 +76,6 @@
 
 在 Android P 及以上，为了反射不受限，还会强行关闭 hidden api 检查（修改 `nativeForkAndSpecialize` 的 `runtime_flags`）。
 
-在 Android Q 上，在 systemui 进程中会强行关闭 file uri 暴露检查（执行 `StrictMode.disableDeathOnFileUriExposure`）。（暴力修复“系统 bug”）
-
 ### 4.2. 修复 rename
 
 通过在应用进程内 hook `rename`，如果返回 -1 且 `errno == EXDEV` 则先复制后删除并修改返回值。

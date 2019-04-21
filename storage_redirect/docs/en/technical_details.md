@@ -76,8 +76,6 @@ When you use Media Store, the results are modified based on the "Accessible Fold
 
 In Android P and above, for unlimited reflection, the hidden api check is forced to disable (modify `runtime_flags` of `nativeForkAndSpecialize`).
 
-On Android Q, the file uri exposure check is forced to disabled in systemui process (execute `StrictMode.disableDeathOnFileUriExposure`). (fix "system bug" with violence)
-
 ### 4.2. Fix rename
 
 By hooking `rename` within the app process, if -1 is returned and `errno == EXDEV` then copy and delete and modify the return value.
