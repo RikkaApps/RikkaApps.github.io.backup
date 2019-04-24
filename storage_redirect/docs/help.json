@@ -76,46 +76,9 @@
         }
     },
     {
-        "order": 4,
-        "id": "about_redirect",
-        "title": {
-            "zh-CN": "关于重定向",
-            "zh-TW": "關於重新導向",
-            "en": "About redirect"
-        },
-        "summary": {
-            "zh-CN": "了解开启重定向后应用的行为",
-            "zh-TW": "瞭解開啟重新導向後程式的行為",
-            "en": "Learn app behavior after redirect enabled"
-        },
-        "content": {
-            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=关于重定向",
-            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=關於重新導向",
-            "en": "https://rikka.app/storage_redirect/docs/en/?doc=About%20redirect"
-        }
-    },
-    {
-        "order": 5,
-        "id": "about_link",
-        "title": {
-            "zh-CN": "关于链接",
-            "zh-TW": "關於連結",
-            "en": "About link"
-        },
-        "summary": {
-            "zh-CN": "什么是链接，为什么需要链接",
-            "zh-TW": "什麼是連結，為什麼需要連結",
-            "en": "What is a link and why we need it"
-        },
-        "content": {
-            "zh-CN": "https://rikka.app/storage_redirect/docs/zh-CN/?doc=关于链接",
-            "zh-TW": "https://rikka.app/storage_redirect/docs/zh-TW/?doc=關於連結",
-            "en": "https://rikka.app/storage_redirect/docs/en/?doc=About%20link"
-        }
-    },
-    {
         "order": 6,
         "id": "what_is_share_helper",
+        "hide_from_list": true,
         "title": {
             "zh-CN": "什么是“分享助手”",
             "zh-TW": "什麼是「分享助手」",
@@ -149,6 +112,7 @@
     {
         "order": 8,
         "id": "payment",
+        "hide_from_list": true,
         "title": {
             "zh-CN": "购买问题",
             "zh-TW": "購買問題",
