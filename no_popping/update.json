@@ -1,0 +1,20 @@
+{
+    "code": 54,
+    "name": "0.9.3 (54)",
+    "ignoreable": false,
+    "download": {
+        "url": "https://coolapk.com/apk/rikka.nopeeking"
+    },
+    "text": {
+        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font>",
+        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version available</size></font>"
+    },
+    "download_button": {
+        "zh-CN": "下载",
+        "en": "Download"
+    },
+    "ignore_button": {
+        "zh-CN": "忽略这个版本",
+        "en": "Ignroe this version"
+    }
+}
