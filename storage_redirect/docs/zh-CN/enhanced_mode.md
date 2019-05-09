@@ -14,13 +14,13 @@
 
 ## 兼容性
 
-支持 Android 6.0 - Android Q DP2
+支持 Android 6.0 - Android Q Beta 3
 
 #### 其他特殊情况
 
 * “TaiChi·Magisk”
 
-  根据用户回报，目前（2019/3/4）似乎仍有不能同时使用的情况。请**使用下面的检测 app 确认运行情况**，如果出现问题请自行取舍。
+  根据用户回报，目前（2019/3/4）似乎仍有不能同时使用的情况。请**使用下面的 [检测 app](#magisk-模块) 确认运行情况**，如果出现问题请自行取舍。
 
 ## 性能影响
 
@@ -50,6 +50,7 @@
 
 | 应用版本    | Riru - Storage Redirect 版本 | Riru - Core 版本 |
 |-------------|------------------------------|------------------|
+| 1.6.8+      | v19.5+                       | v19+             |
 | 1.6.3+      | v19.3+                       | v18+             |
 | 1.5.2+      | v19.x                        | v16+             |
 | 1.5.0-1.5.1 | v18.1                        | v16+             |
@@ -60,11 +61,25 @@
 
 ### Magisk 模块
 
-1. 下载 [Riru - Core v18](https://github.com/RikkaApps/Riru/releases/download/v18/magisk-riru-core-v18.zip) 
-2. 下载 [Riru - Storage Redirect v19.4](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.4.zip)
+1. 下载 Riru - Core
+2. 下载 Riru - Storage Redirect
 3. 在 Magisk 中安装这两个模块
-4. 可选，下载 [检测 app](https://github.com/RikkaApps/Riru/releases/download/v17/app-release.apk) 来检查 Riru 是否正常工作
-   
+4. 可选，下载 [检测 app for v19](https://github.com/RikkaApps/Riru/releases/download/v19/app-release.apk) 来检查 Riru 是否正常工作
+
+* Latest (for app 1.6.8+)
+
+  [Riru - Core v19](https://github.com/RikkaApps/Riru/releases/download/v19/magisk-riru-core-v19.zip)
+
+  [Riru - Storage Redirect v19.5](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.5.zip)
+
+* History
+
+  [Riru - Core v18](https://github.com/RikkaApps/Riru/releases/download/v19/magisk-riru-core-v19.zip)
+
+  [Riru - Storage Redirect v19.4](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.4.zip)
+  
 ### 重新启动 zygote
 
 > Riru v14 起内置此功能
+
+此外，如果你从 recovery 安装模块，请尝试重新从 Magisk Manager 安装。

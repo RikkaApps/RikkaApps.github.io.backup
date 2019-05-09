@@ -14,13 +14,13 @@
 
 ## Compatibility
 
-Support Android 6.0 - Android Q DP2
+Support Android 6.0 - Android Q Beta 3
 
 #### Other special cases
 
 * "TaiChi·Magisk"
 
-  According to the user's return, it seems currently (2019/3/4) there is still a problem that cannot be used at the same time. Please **use the following test app to confirm work status**. If there is a problem, you may have to make a choose.
+  According to the user's return, it seems currently (2019/3/4) there is still a problem that cannot be used at the same time. Please **use the following [test app](#magisk-modules) to confirm work status**. If there is a problem, you may have to make a choose.
 
 ## Performance impact
 
@@ -60,11 +60,25 @@ We **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/m
 
 ### Magisk modules
 
-1. Download [Riru - Core v18](https://github.com/RikkaApps/Riru/releases/download/v18/magisk-riru-core-v18.zip)
-2. Download [Riru - Storage Redirect v19.4](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.4.zip)
+1. Download Riru - Core
+2. Download Riru - Storage Redirect
 3. Install these two modules in Magisk
-4. Optionally, download [check app](https://github.com/RikkaApps/Riru/releases/download/v17/app-release.apk) to check if Riru works
+4. Optionally, download [check app for v19](https://github.com/RikkaApps/Riru/releases/download/v19/app-release.apk) to check if Riru works
 
+* Latest (for app 1.6.8+)
+
+  [Riru - Core v19](https://github.com/RikkaApps/Riru/releases/download/v19/magisk-riru-core-v19.zip)
+
+  [Riru - Storage Redirect v19.5](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.5.zip)
+
+* History
+
+  [Riru - Core v18](https://github.com/RikkaApps/Riru/releases/download/v19/magisk-riru-core-v19.zip)
+
+  [Riru - Storage Redirect v19.4](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.4.zip)
+  
 ### Restart zygote
 
 > Built-in from Riru v14
+
+Also, if you install the module from recovery, try installing it again from Magisk Manager.
