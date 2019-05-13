@@ -50,6 +50,8 @@ We **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/m
 
 | App Version    | Riru - Storage Redirect Version | Riru - Core Version |
 |----------------|---------------------------------|---------------------|
+| 1.6.9+         | v19.6+                          | v19+                |
+| 1.6.8+         | v19.5+                          | v19+                |
 | 1.6.3+         | v19.3+                          | v18+                |
 | 1.5.2+         | v19.x                           | v16+                |
 | 1.5.0-1.5.1    | v18.1                           | v16+                |
@@ -60,22 +62,12 @@ We **temporarily** only provide [Magisk](https://forum.xda-developers.com/apps/m
 
 ### Magisk modules
 
-1. Download Riru - Core
-2. Download Riru - Storage Redirect
-3. Install these two modules in Magisk
+1. Download and install **Riru - Core** in **Magisk Manager**
+2. Download **Riru - Storage Redirect** and install in **Magisk Manager**
 4. Optionally, download [check app for v19](https://github.com/RikkaApps/Riru/releases/download/v19/app-release.apk) to check if Riru works
 
-* Latest (for app 1.6.8+)
-
-  [Riru - Core v19](https://github.com/RikkaApps/Riru/releases/download/v19/magisk-riru-core-v19.zip)
-
-  [Riru - Storage Redirect v19.5](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.5.zip)
-
-* History
-
-  [Riru - Core v18](https://github.com/RikkaApps/Riru/releases/download/v19/magisk-riru-core-v19.zip)
-
-  [Riru - Storage Redirect v19.4](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.4.zip)
+* [Riru - Storage Redirect v19.6 (app 1.6.9)](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.6.zip)
+* [Riru - Storage Redirect v19.5 (app 1.6.8)](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.5.zip)
   
 ### Restart zygote
 

@@ -50,6 +50,7 @@
 
 | 应用版本    | Riru - Storage Redirect 版本 | Riru - Core 版本 |
 |-------------|------------------------------|------------------|
+| 1.6.9+      | v19.6+                       | v19+             |
 | 1.6.8+      | v19.5+                       | v19+             |
 | 1.6.3+      | v19.3+                       | v18+             |
 | 1.5.2+      | v19.x                        | v16+             |
@@ -61,22 +62,12 @@
 
 ### Magisk 模块
 
-1. 下载 Riru - Core
-2. 下载 Riru - Storage Redirect
-3. 在 Magisk 中安装这两个模块
+1. 在 **Manager Manager** 中下载安装 **Riru - Core**
+2. 下载 **Riru - Storage Redirect** 并在 **Magisk Manager** 中安装
 4. 可选，下载 [检测 app for v19](https://github.com/RikkaApps/Riru/releases/download/v19/app-release.apk) 来检查 Riru 是否正常工作
 
-* Latest (for app 1.6.8+)
-
-  [Riru - Core v19](https://github.com/RikkaApps/Riru/releases/download/v19/magisk-riru-core-v19.zip)
-
-  [Riru - Storage Redirect v19.5](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.5.zip)
-
-* History
-
-  [Riru - Core v18](https://github.com/RikkaApps/Riru/releases/download/v19/magisk-riru-core-v19.zip)
-
-  [Riru - Storage Redirect v19.4](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.4.zip)
+* [Riru - Storage Redirect v19.6 (app 1.6.9)](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.6.zip)
+* [Riru - Storage Redirect v19.5 (app 1.6.8)](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.5.zip)
   
 ### 重新启动 zygote
 
