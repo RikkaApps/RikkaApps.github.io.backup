@@ -1,115 +1,120 @@
-# Explanation of terms
+# Must read help
 
-* Internal storage: built-in storage of the device, such as folder `/storage/emulated/<user id>` (user id is generally 0, the primary user)
-* Root directory (of internal storage): such as folder `/storage/emulated/0`
-* Application-specific folders (on internal storage): Application-specific folders provided by Android systems, such as `/storage/emulated/0/Android/data/com.example` (where `com.example` is the app package name)
-* Redirect target folder: a folder in app-specific folder, each redirected app have this option
-* Non-redirect folders: a set of folders, each redirected app have this option
+<!-- TOC depthFrom:2 depthTo:4 -->
 
-# Our philosophy
+- [1. Basic knowledge and terminology](#1-basic-knowledge-and-terminology)
+- [2. Our philosophy](#2-our-philosophy)
+- [3. Best Practices](#3-best-practices)
+    - [3.1. Understand what happens when you turn on storage isolation (redirect)](#31-understand-what-happens-when-you-turn-on-storage-isolation-redirect)
+    - [3.2. Understand the situation that affect the normal use of the app and solutions](#32-understand-the-situation-that-affect-the-normal-use-of-the-app-and-solutions)
+    - [3.3. Related Options](#33-related-options)
+- [4. About Android Q](#4-about-android-q)
 
-We hope that the app should only save **files that are useful to the user** to internal storage (except application-specific folder) and user should perceive it (for example, save received images in chat apps, download files in browser apps).
+<!-- /TOC -->
 
-But many applications (especially most applications from mainland China), either actively or passively (behaviors from some SDKs they used) create many folders in internal storage, most of which are privately formatted data. **These files should be saved to the application-specific folder**. After uninstalling those apps, those files will not be deleted. We believe that such behavior is unacceptable.
+## 1. Basic knowledge and terminology
 
-"Storage Rediret" is designed to let apps behave as we wish, with minimal impact on the user experience.
+Note: The terminology used here is based on the habits accepted by the majority, and the statements are different. Please read the document herewith.
 
-# Tutorial from scratch
+For Android apps, its data is primarily stored in the "app private folder" (`/data/data`) and "internal storage" (`/storage/emulated`). The "internal storage" is a public space provided to applications and users. Applications with storage rights can freely read and write files here, and connect to the computer through data lines in MTP mode or large-capacity storage (discarded after 4.x). This mode is also used to open the phone storage to see this "built-in storage space".
 
-## Understand what happens when you enable redirect
+The "internal storage" of most phones/ROMs is located at `/storage/emulated/<user id>` (user id is generally 0, the primary user), and there are some standard folders in the root directory for saving. Public media files and some application data (including game data packages, etc.), for example:
 
-After enabling redirect, when the app reads/writes files in the internal storage, it actually reads/writes the files in the "Redirect target folder" so that the internal storage is not contaminated. However, the app will not be able to access some of the required files (such as the chat app need to access photos), so we introducted "Non-redirect folders", where the app can read or write files as usual.
+* Application-specific folder (`Android/data/application package name`): The system designs a dedicated folder for the application in the built-in storage, which can save data, cache, and so on. Data is cleared when the app is uninstalled or reinstalled.
+* Alarms (`Alarms`)
+* Pictures (`Pictures`)
+* Camera saved pictures (`DCIM`)
+* Documents (`Documents`)
+* Downloads (`Download`)
+* Movies (`Movies`)
+* Music (`Music`)
+* Notifications (`Notifications`)
+* Ringtones (`Ringtones`)
 
-You can also use "View redirect storage" feature to view internal storage from the perspective of the redirected app.
+There are other standard folders created by third-party Android systems (such as `bluetooth`, etc.), which cannot be explained here. The definition of standard folders can also be extended by users according to actual needs.
 
-In addition, files created by this app will be managed by the Android system as long as they are not in the "Non-redirect folders" folder. You can view the space occupied by these files in the App info of the system. When you clear the application data or uninstall the application, these files will also be deleted.
+The traditional way to locate files in storage is to use `file uri`, absolute paths (such as `file:///storage/emulated/0/test.txt`), but this path is not recommended for app interactions in Android 7.0. (the interaction that transfering the file location to another app such as sharing pictures, opening documents, etc.). Modern Android is more recommended to use the `content uri`, path to point to a content provider (ie `Content Provider`) to send file content to other apps, otherwise the app will encounter some problems, which will be mentioned in later chapters.
 
-## Understand situations that may affect the normal use of the app
+## 2. Our philosophy
 
-Situations that affect the normal usage are basically situations involving multiple app interactions.
+Apps with the storage permission can use "internal storage" at will, ie apps can read any files in "built-in storage" or write files anywhere. Some apps will refuse to work when they don't have permission or some features of the app must use the storage permission. In many cases, users can only choose to grant the permission.
 
-In short, a file path, to redirected and not redirected apps or different redirected apps, may correspond to a different file.
-So there will be problems if these apps pass file path rather than use `Content Provider`.
+This means:
 
-Problems can be divided into these categories:
+* Some apps that do not value the user experience will arbitrary save various kinds of private data, while the documents, music and other files that actively saved by the user are mixed in, which makes the user get bad experience when browsing and organizing the storage space.
+* Users cannot control which files the app can read.
 
-1. Use other apps to open files from a redirected app (Workaround with "Link" feature, solve with "Enhance module" in the future)
-2. Share files from redirected apps
-3. Share files to redirected apps
-4. Files created by a redirected app are used by another redirected app (Solve with "Shared folders" feature)
-5. Redirect apps can't move files between specific folders (Solve with "Enhance module")
+We hope:
 
-Some practical problems that users in mainland China often encounter:
+* The document media that each application saves in the built-in storage will be kept in a reasonable location, and that they cannot access the personal files unconditionally without the user's knowledge. 
 
-* Open received files from QQ and WeChat (1)
-* Send images from Sougou pinyin to QQ (4)
-* Xposed modules modify WeChat not work (4)
-* Bilibili can't save recorded gif (5)
+* For private data that was originally saved everywhere by the app, it should be correctly saved to the "app-specific folder". With the uninstallation of app, they will be removed from the internal storage to free up the storage.
 
-It should be noted that these problems (except 5) usually only appear in poorly designed app, so there should be fewer and fewer problematic situations over time.
+Storage Redirect is designed to let apps follow the behavior we expected, with minimal impact on the experience.
 
-## Judge if redirect is required
+## 3. Best Practices
 
-If an app creates files that unpleasant for you and does not provide an option to change it, you can determine that the redirect should be enabled.
+### 3.1. Understand what happens when you turn on storage isolation (redirect)
 
-If you use the "Enhance module", you can use "File monitor" feature to see what file this app have accessed, and then guess files are created by which app.
+After the storage isolation is turned on, the "internal storage" accessed by the app is not the real location, but a folder located in the app-specific folder (`Android/data/<app package name>`).
 
-## Options related to redirect
+For example, an app with the package name `com.aaa.bbb` thinks that it has saved a picture in `MyFile.jpg`. In fact, this image is saved to `Android/data/com.aaa.bbb/sdcard/MyFile.jpg`.
 
-### Non-redirect folders
+In addition, there will be the following effects after opening:
+1. Only access to isolated storage and folders set in "Accessible folders"
+2. The isolated storage space is cleared as the app is uninstalled
+3. There may be problems with the use (see [3.2](#32-understand-the-situation-that-affect-the-normal-use-of-the-app-and-solutions))
 
-"Non-redirect folders" is a very important option that determines which files the redirected app can access.
-You can also use the "View redirected storage" feature to confirm if the app can access those files.
+### 3.2. Understand the situation that affect the normal use of the app and solutions
 
-### Redirect target folder
+The situations that affects the app are basically situations involving app interactions, and is limited to legacy apps that directly pass file path. These problems should only occur in poorly designed apps, and as time goes on, such situations will become less and less.
 
-"Redirect target folder" is a less important option, which determines that the real folder if the app read/write folder except of "Non-redirect folders". If there are no special requirements, there is usually no need to change this option.
+Here are some specific examples. More situations can be compared to yourself.
 
-### Link
+1. Pass the file path directly
+   
+   * Unable to open files using other apps from QQ, WeChat (pass file path with standard API)
 
-"Link" is a very important part. If you fully understand what happens when you redirect is enabled, you will know that if a redirected app saves useful files to a folder other than "Non-redirect folders", other app may not find these files. The link function was born to solve this problem.
+     Solution: Enable "Fix app interaction issues" in "Enhanced mode" or create a "Sync folder" rule and open the file from the pop-up notification
 
-You can simply understand a link rule as synchronizing a folder in the redirect storage with a outside folder in internal storage, so you can find those files directly in the outer folder.
+   * Cannot initiate apk installation from app (pass file path with standard API)
 
-Applications with online rules usually include link rules, and mostly enable those rules directly is enough. However, it should be noted that the rules are provided by other users, and their correctness and timeliness may not be guaranteed. So we still hope that you can understand how the link function works and create and even contribute your own rules to other users when online rules don't meet their needs.
+     Solution: Enable "Fix app interaction issues" in "Enhancd mode"
 
-In addition, the the link function uses hard link (you can search for what is hard link), and the same file that can be seen in the source folder and the target folder takes up only one storage space.
+   * Sogou Pinyin directly sends pictures to QQ/WeChat (pass file path with private way)
 
-#### How to create your own link rules
+     Solution: Create a "Shared folder" rule ("Isolate storage from other apps" in "Accessible Folders")
 
-First of all, the link feature should only be used to link useful files (such as images and documents saved in a chat app). Some people will mistakenly believe that the various files generated by the application need to be linked. If this is the case, the redirect will lose its meaning.
+2. App cannot move files between specific folders
 
-Using WeChat as an example, WeChat will save the received file to `tencent/MicroMsg/WeChat`. If redrect is enabled, they will actually be saved to `Android/data/com.tencent.mm/sdcard/tencent/MicroMsg/WeChat`, which makes it very inconvenient to find the files. So we need to create a link rule to link these files to a outer folder.
+   * Bilibili can't save the recorded video gif
 
-We can simply create such a link rule:
+     Solution: Use "Fix rename" in "Enhancd mode"
 
-* Source path: `tencent/MicroMsg/WeChat`
-* Target path: `Download/WeChat`
+3. Related to Xposed (essentially the same as 1)
+   
+   Some Xposed modules take the form of creating files in the internal storage as a way to save the configuration. The file will be read by different processes.
 
-Then received file will be savefd to `Download/WeChat`. But then you will definitely find some problems.
+   Solution: Create a "Shared folder" rule ("Isolate storage from other apps" in "Accessible Folders")
 
-1. Received images can not be found in album apps
+### 3.3. Related Options
 
-   Enable "Add to Media storage" option
+Not yet completed, please refer to the in-app description directly.
 
-2. "Open with other app" can not open files
-  
-   This is because WeChat dose not use `Content Provider`. There is currently only one workaround for this problem, the "Show notifications" option. When you check "Show notification" and receive the file again, you will see a new "Downloaded xxx" notification. Clicking this notification will open the file normally.
-   
-   You can also find these files directly from other file manager apps or Android's File app.
+## 4. About Android Q
 
-3. Some unwanted files appeared
+The implementation of the storage sandbox for Android Q is no different from ours, which means that we will also encounter the same problems as we do (see [3.2](#32-understand-the-situation-that-affect-the-normal-use-of-the-app-and-solutions)).
 
-   WeChat **may** save other files (start with com.tencent.xin.emoticon) to `tencent/MicroMsg/WeChat`, but we don't need to access these files outside. So we need use "Filter" option to exclude these files。
+While apps must change to work properly on Android Q, not all apps will adapt quickly. To have a very good experience requires all the application adaptations involved. This is obviously impossible before mainstream vendors upgrade to Android Q. In addition, the storage sandbox of Android Q can be turned off, and some vendors may choose to close it.
 
-   The "Filter" feature uses regular expressions, and you can search for regular expressions yourself.
+Therefore, for a long time, our application will still be the best solution.
 
-### Shared folders
+* 2019/04/25: Sandbox will applied to all apps in the next major platform release after Android Q
 
-"Shared folders" is a very important part from version v1.2.0. In short, a shared folder allows a redirected app to access a file generated by another redirected app.
+  > In the upcoming Beta 3 release, apps that target Android 9 Pie (API level 28) or lower will see no change, by default, to how storage works from previous Android versions. 
+  > 
+  > Scoped Storage will be required in next year’s major platform release for all apps, independent of target SDK level.
+  > 
+  > [Android Developers Blog](https://android-developers.googleblog.com/2019/04/android-q-scoped-storage-best-practices.html)
 
-### Things you need to do after you enable redirect
-
-#### Transfer and delete files previously created by the app
-
-Because the files in the internal storage cannot track the creator, you need to move and delete the files created by the app yourself.
+  Obviously, most mainstream company will not actively adapt until the next major platform release comes.
