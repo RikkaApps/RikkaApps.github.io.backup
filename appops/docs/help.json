@@ -22,28 +22,28 @@
         "order": 1,
         "id": "privilege_mode",
         "title": {
-            "zh-CN": "什么是特权模式？",
-            "zh-TW": "什麼是特權模式？",
-            "en": "What is privilege mode?"
+            "zh-CN": "特权模式",
+            "zh-TW": "特權模式",
+            "en": "Privilege mode"
         },
         "content": {
-            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=what_is_privilege_mode&title=%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%B9%E6%9D%83%E6%A8%A1%E5%BC%8F%EF%BC%9F",
-            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=what_is_privilege_mode&title=%E4%BB%80%E9%BA%BC%E6%98%AF%E7%89%B9%E6%AC%8A%E6%A8%A1%E5%BC%8F%EF%BC%9F",
-            "en": "https://rikka.app/appops/docs/en/?doc=what_is_privilege_mode&title=What%20is%20privilege%20mode?"
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=what_is_privilege_mode&title=特权模式",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=what_is_privilege_mode&title=特權模式",
+            "en": "https://rikka.app/appops/docs/en/?doc=what_is_privilege_mode&title=Privilege%20mode"
         }
     },
     {
         "order": 2,
         "id": "dpm_mode",
         "title": {
-            "zh-CN": "如何使用托管设备管理员模式？",
-            "zh-TW": "如何使用託管裝置管理員模式？",
-            "en": "How to use Delegated Device admin mode?"
+            "zh-CN": "托管设备管理员模式",
+            "zh-TW": "託管裝置管理員模式",
+            "en": "Delegated Device Admin mode"
         },
         "content": {
-            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=what_is_privilege_mode&title=如何使用托管设备管理员模式？",
-            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=what_is_privilege_mode&title=如何使用託管裝置管理員模式？",
-            "en": "https://rikka.app/appops/docs/en/?doc=what_is_privilege_mode&title=How%20to%20use%20Delegated%20Device%20admin%20mode?"
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=dpm_mode&title=托管设备管理员模式",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=dpm_mode&title=託管裝置管理員模式",
+            "en": "https://rikka.app/appops/docs/en/?doc=dpm_mode&title=Delegated%20Device%20admin%20mode"
         }
     },
     {
