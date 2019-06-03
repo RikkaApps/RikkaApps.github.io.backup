@@ -34,6 +34,20 @@
     },
     {
         "order": 2,
+        "id": "dpm_mode",
+        "title": {
+            "zh-CN": "如何使用托管设备管理员模式？",
+            "zh-TW": "如何使用託管裝置管理員模式？",
+            "en": "How to use Delegated Device admin mode?"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/appops/docs/zh-CN/?doc=what_is_privilege_mode&title=如何使用托管设备管理员模式？",
+            "zh-TW": "https://rikka.app/appops/docs/zh-TW/?doc=what_is_privilege_mode&title=如何使用託管裝置管理員模式？",
+            "en": "https://rikka.app/appops/docs/en/?doc=what_is_privilege_mode&title=How%20to%20use%20Delegated%20Device%20admin%20mode?"
+        }
+    },
+    {
+        "order": 3,
         "id": "less_items",
         "title": {
             "zh-CN": "为什么我找不到部分权限？",
@@ -52,7 +66,7 @@
         }
     },
     {
-        "order": 3,
+        "order": 4,
         "id": "some_not_work",
         "title": {
             "zh-CN": "为什么一些权限设置无效？",
@@ -66,7 +80,7 @@
         }
     },
     {
-        "order": 4,
+        "order": 5,
         "id": "reset_all",
         "title": {
             "zh-CN": "如何重置全部设置？",
