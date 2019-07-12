@@ -66,14 +66,14 @@
 
 1. 在 **Magisk Manager** 中下載安裝 **Riru - Core**
 2. 下載 **Riru - Storage Redirect** 並在 Magisk Manager 中安裝
-3. 可選，下載 [檢測 app for v19.1](https://github.com/RikkaApps/Riru/releases/download/v19.1/app-release.apk) 來檢查 Riru 是否正常工作
+3. 可選，下載 [檢測 app for v19.3](https://github.com/RikkaApps/Riru/releases/download/v19.3/app-release.apk) 來檢查 Riru 是否正常工作
 
 ### Magisk v19+
 * Install **Riru - Core** from **Magisk Manager**
 * [Riru - Storage Redirect v19.6](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/magisk-riru-storage-redirect-v19.6.zip)
 
 ### Magisk v17-v18.1
-* [Riru - Core v19.1](https://github.com/RikkaApps/Riru/releases/download/v19.1/riru-core-v19.1-magisk-v17.zip)
+* [Riru - Core v19.3](https://github.com/RikkaApps/Riru/releases/download/v19.3/magisk-v17-riru-core-v19.3.zip)
 * [Riru - Storage Redirect v19.6](https://github.com/RikkaApps/StorageRedirect-assets/releases/download/assets/riru-storage-redirect-v19.6-magisk-v17.zip)
 
 ### 重新啟動 zygote
