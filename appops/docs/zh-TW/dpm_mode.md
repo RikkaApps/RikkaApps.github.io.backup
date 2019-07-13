@@ -2,7 +2,11 @@
 
 ## 背景
 
-託管裝置管理員模式是 App Ops 從 v2.9.0 開始加入的新的工作模式。從 Android 9 開始，裝置管理員開始可以修改 appops 設定，但系統限制一臺裝置上僅能設定一個程式為裝置管理員。因此 App Ops 程式選擇使用 [Delegated Scopes Manager](https://github.com/heruoxin/Delegated-Scopes-Manager) 。接入 Delegated Scopes Manager 的裝置管理員程式可為其他程式提供裝置管理員權限，App Ops 即可使用需要的權限。
+託管裝置管理員模式是 App Ops 從 v2.9.0 開始加入的新的工作模式。從 Android 9 開始，裝置管理員開始可以修改 appops 設定，但系統限制一臺裝置上僅能設定一個程式為裝置管理員。因此 App Ops 使用由其他裝置管理員程式提供的 API。
+
+從 v2.9.0 起支援使用 [Delegated Scopes Manager](https://github.com/heruoxin/Delegated-Scopes-Manager) 的裝置管理員程式。
+
+從 v2.9.8 起支援另一種[由 Island 提供的 API](https://island.oasisfeng.com/api)。
 
 ## 免責聲明
 
@@ -16,8 +20,6 @@
 
 ### 1. 安裝及設定裝置管理員程式
 
-目前只有兩款裝置管理員程式使用了 Delegated Scopes Manager。
-
 #### 冰箱 IceBox
   
 1. 下載 [Google Play](https://play.google.com/store/apps/details?id=com.catchingnow.icebox) 或 [Coolapk](https://www.coolapk.com/apk/com.catchingnow.icebox)
@@ -27,6 +29,11 @@
   
 1. 下載 [Google Play](https://play.google.com/store/apps/details?id=web1n.stopapp) 或 [Coolapk](https://www.coolapk.com/apk/web1n.stopapp)
 2. 參閱 [幫助](https://github.com/web1n/Stopapp-Docs/blob/master/Device%20Owner%20%EF%BC%88%E5%85%8D%20root%EF%BC%89%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE.md)（僅提供簡體中文） 為其設定裝置管理員模式
+
+#### Island
+
+1. 下載 [Google Play](https://play.google.com/store/apps/details?id=https://island.oasisfeng.com/setup) 或 [Coolapk](https://www.coolapk.com/apk/https://island.oasisfeng.com/setup)
+2. 參閱 [幫助](https://island.oasisfeng.com/setup) 為其設定裝置管理員模式（Island 稱其為「上帝模式」）
 
 ### 2. 授予權限
 
