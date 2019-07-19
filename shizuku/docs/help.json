@@ -1,0 +1,16 @@
+[
+    {
+        "order": 0,
+        "id": "adb",
+        "title": {
+            "zh-CN": "使用 adb 启动",
+            "zh-TW": "使用 adb 啟動",
+            "en": "Start with adb"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/shizuku/docs/zh-CN/?doc=adb&title=使用%20adb%20启动",
+            "zh-TW": "https://rikka.app/shizuku/docs/zh-TW/?doc=adb&title=使用%20adb%20启动",
+            "en": "https://rikka.app/shizuku/docs/en/?doc=adb&title=Start%20with%20adb"
+        }
+    }
+]
