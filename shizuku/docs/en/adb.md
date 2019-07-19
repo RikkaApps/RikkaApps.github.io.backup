@@ -29,6 +29,8 @@ See [Android Developer](https://developer.android.com/studio/command-line/adb) f
 
 > Please do not close this window. The "terminal" mentioned later refers to this window (if you closed the window, please go back to step 2)
 
+> If you use PowerShell, all `adb` should be replaced with `./adb`
+
 ### 2.2. Linux / macOS
 
 You guys definitely can do this yourself :D
