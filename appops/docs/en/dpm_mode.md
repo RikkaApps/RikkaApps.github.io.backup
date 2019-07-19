@@ -2,7 +2,11 @@
 
 ## Background
 
-Delegated Device Admin mode is a new working mode that App Ops has added since v2.9.0. Starting with Android 9, Device admin apps can modify appops settings, but the system limits the ability to set only one app as a Device admin on a device. Therefore, the App Ops app chooses to use [Delegated Scopes Manager](https://github.com/heruoxin/Delegated-Scopes-Manager). Device admin apps that using Delegated Scopes Manager can provide Device admin privileges for other apps, so App Ops can aquire permission from this.
+Delegated Device Admin mode is a new working mode that App Ops has added since v2.9.0. Starting with Android 9, Device admin apps can modify appops settings, but the system limits the ability to set only one app as a Device admin on a device. Therefore, the App Ops app chooses to use APIs provided by other Device admin apps.
+
+From v2.9.0, App Ops supports Device admin apps using [Delegated Scopes Manager](https://github.com/heruoxin/Delegated-Scopes-Manager).
+
+From v2.9.8, App Ops supports [another API provided by Island app](https://island.oasisfeng.com/api).
 
 ## Disclaimer
 
@@ -16,8 +20,6 @@ The setup process requires a computer to be use adb, but only needs to be set on
 
 ### 1. Install and set up the Device admin app
 
-Currently only two Device admin apps use Delegated Scopes Manager.
-
 #### IceBox
   
 1. Download from [Google Play](https://play.google.com/store/apps/details?id=com.catchingnow.icebox) or [Coolapk](https://www.coolapk.com/apk/com.catchingnow.icebox)
@@ -25,8 +27,13 @@ Currently only two Device admin apps use Delegated Scopes Manager.
 
 #### 小黑屋 (Simplified Chinese only)
   
-1. Download [Google Play](https://play.google.com/store/apps/details?id=web1n.stopapp) or [Coolapk](https://www.coolapk.com/apk/web1n.stopapp )
+1. Download from [Google Play](https://play.google.com/store/apps/details?id=web1n.stopapp) or [Coolapk](https://www.coolapk.com/apk/web1n.stopapp )
 2. See [Help](https://github.com/web1n/Stopapp-Docs/blob/master/Device%20Owner%20%EF%BC%88%E5%85%8D%20root%EF%BC%89%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE.md) (Simplified Chinese only) to set up Device admin mode for it
+
+#### Island
+
+1. Download from [Google Play](https://play.google.com/store/apps/details?id=https://island.oasisfeng.com/setup) or [Coolapk](https://www.coolapk.com/apk/https://island.oasisfeng.com/setup)
+2. See [Help](https://island.oasisfeng.com/setup) to set up Device admin mode for it (Island call it "God mode")
 
 ### 2. Granting permissions
 
