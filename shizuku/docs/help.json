@@ -12,5 +12,19 @@
             "zh-TW": "https://rikka.app/shizuku/docs/zh-TW/?doc=adb&title=使用%20adb%20启动",
             "en": "https://rikka.app/shizuku/docs/en/?doc=adb&title=Start%20with%20adb"
         }
+    },
+    {
+        "order": 1,
+        "id": "apps",
+        "title": {
+            "zh-CN": "使用 Shizuku 的应用",
+            "zh-TW": "使用 Shizuku 的應用程式",
+            "en": "Apps using Shizuku"
+        },
+        "content": {
+            "zh-CN": "https://rikka.app/shizuku/docs/zh-CN/?doc=apps&title=使用%20Shizuku%20的应用",
+            "zh-TW": "https://rikka.app/shizuku/docs/zh-TW/?doc=apps&title=使用%20Shizuku%20的應用程式",
+            "en": "https://rikka.app/shizuku/docs/en/?doc=apps&title=Apps%20using%20Shizuku"
+        }
     }
 ]
