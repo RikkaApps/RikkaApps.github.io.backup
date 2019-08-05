@@ -1,13 +1,13 @@
 {
-    "code": 898,
-    "name": "2.9.7",
+    "code": 956,
+    "name": "3.1.1",
     "ignoreable": false,
     "download": {
         "url": "https://github.com/RikkaApps/App-Ops-issue-tracker/releases"
     },
     "text": {
-        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">有新版本可用</size></font>",
-        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version available</size></font>"
+        "zh-CN": "<font face=\"sans-serif-medium\"><size value=\"16sp\">新版本 3.1.1 可用</size></font>",
+        "en": "<font face=\"sans-serif-medium\"><size value=\"16sp\">New version 3.1.1 available</size></font>"
     },
     "download_button": {
         "zh-CN": "下载",
